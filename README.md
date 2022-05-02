@@ -25,16 +25,16 @@ Refer to the table below for a detailed view of final models materialized by def
 
 | **model**                  | **description**                                                                                                                                               |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [app_reporting__app_version_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__app_version_report)             | Each record represents daily metrics by app_name and app version.                                             |
-| [app_reporting__country_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__country_report)     | Each record represents daily metrics by app_name and country |
-| [app_reporting__device_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__device_report)     | Each record represents daily metrics by app_name and device.                             |
-| [app_reporting__os_version_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__os_version_report)    | Each record represents daily metrics by app_name and OS version.                            |
-| [app_reporting__overview_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__overview_report)   | Each record represents daily metrics by app_name.                            |
-| [app_reporting__subscription_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__subscription_report)   | Each record represents daily metrics by app_name and subscription_name                            |
-| [app_reporting__traffic_source_report](https://dbt-github.netlify.app/#!/model/model.github.app_reporting__traffic_source_report) | Each record represents daily metrics by app_name and traffic source.                         |
+| [app_reporting__app_version_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__app_version_report.sql)             | Each record represents daily metrics by app_name and app version.                                             |
+| [app_reporting__country_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__country_report.sql)     | Each record represents daily metrics by app_name and country |
+| [app_reporting__device_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__device_report.sql)     | Each record represents daily metrics by app_name and device.                             |
+| [app_reporting__os_version_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__os_version_report.sql)    | Each record represents daily metrics by app_name and OS version.                            |
+| [app_reporting__overview_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__overview_report.sql)   | Each record represents daily metrics by app_name.                            |
+| [app_reporting__subscription_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__subscription_report.sql)   | Each record represents daily metrics by app_name and subscription_name                            |
+| [app_reporting__traffic_source_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__traffic_source_report.sql) | Each record represents daily metrics by app_name and traffic source.                         |
 
 # 🤔 Who is the target user of this dbt package?
-- You use more than one of Fivetran' app platform connectors, including:
+- You use more than one of Fivetran's app platform connectors, including:
     - [Apple App Store](https://fivetran.com/docs/applications/apple-app-store)
     - [Google Play](https://fivetran.com/docs/applications/google-play)
 - You use dbt
@@ -44,7 +44,9 @@ Refer to the table below for a detailed view of final models materialized by def
 To effectively install this package and leverage the pre-made models, you will follow the below steps:
 ## Step 1: Pre-Requisites
 You will need to ensure you have the following before leveraging the dbt package.
-- **Connector**: Have all relevant Fivetran app platform connectors syncing data into your warehouse. 
+- **Connector**: Have all relevant Fivetran app platform connectors syncing data into your warehouse. This package currently supports:
+    - [Apple App Store](https://fivetran.com/docs/applications/apple-app-store)
+    - [Google Play](https://fivetran.com/docs/applications/google-play)
 - **Database support**: This package has been tested on **BigQuery**, **Snowflake**, **Redshift**, **Postgres** and **Databricks**. Ensure you are using one of these supported databases.
 - **dbt Version**: This dbt package requires you have a functional dbt project that utilizes a dbt version within the respective range `>=1.0.0, <2.0.0`.
 
@@ -58,46 +60,23 @@ packages:
 ```
 ## Step 3: Configure Your Variables
 ### Database and Schema Variables
-By default, this package looks for your app platform data in your target database. If this is not where your advertising data is stored, add the relevant `_database` variables to your `dbt_project.yml` file (see below).
+By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `_database` variables to your `dbt_project.yml` file (see below).
 
-By default, this package also looks for specific schemas from each of your connectors. The schemas from each connector are highlighted in the code snippet below. If your data is stored in a different schema, add the relevant `_schema` variables to your `dbt_project.yml` file:
+By default, this package also looks for specific schemas from each of your connectors. The schemas from each connector are highlighted in the code snippet below. If your data is stored in a different schema, add the relevant `_schema` variables to your `dbt_project.yml` file (see below).
+
+Additionally, by default, this package will also use the default source table names. If any of your tables are named differently, add the relevant `_identifier` variables to your `dbt_project.yml` file. For example, if your `app` table is named `app_usa` then you can set a variable for `app_identifier` to be `app_usa`. 
 
 ```yml
 vars:
   apple_store_schema: itunes_connect
   apple_store_database: your_database_name
+  <default_apple_store_source_table_name>_identifier: your_table_name
   
   google_play_schema: google_play
   google_play_database: your_database_name 
+  <default_google_play_source_table_name>_identifier: your_table_name
 ```
 
-### Connector Selection
-The package assumes that all connector models are enabled, so it will look to pull data from all of the connectors listed above. If you don't want to use certain connectors, disable those connectors' models in this package by setting the relevant variables to `false`.
-
-```yml
-vars:
-  app_reporting__google_play_enabled: false
-  app_reporting__apple_store_enabled: false
-```
-
-Next, you must disable the models in the unwanted connector's related package, which has its own configuration. Disable the relevant models under the models section of your `dbt_project.yml` file by setting the `enabled` value to `false`.
-
-Only include the models you want to disable. Default values are generally `true` but that is not always the case.
-
-```yml
-models:
-  # disable both Apple App Store models if not using Apple App Store
-  apple_store:
-    enabled: false
-  apple_store_source:
-    enabled: false
-
-  # disable both Google Play models if not using Google Play
-  google_play:
-    enabled: false
-  google_play_source:
-    enabled: false
-```
 ### Configuring Components
 Your app platform connectors might not sync every table that this package expects. If your syncs exclude certain tables, it is because you either don't use that functionality in your respective app platforms or have actively excluded some tables from your syncs.
 
