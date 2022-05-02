@@ -66,6 +66,7 @@ By default, this package also looks for specific schemas from each of your conne
 vars:
   apple_store_schema: itunes_connect
   apple_store_database: your_database_name
+  
   google_play_schema: google_play
   google_play_database: your_database_name 
 ```
