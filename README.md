@@ -101,7 +101,7 @@ By default this package will build all models in your `<target_schema>` with the
 ```yml
 models:  
   app_reporting:
-    +schema: app_reporting
+    +schema: app_reporting # default schema suffix
 
   apple_store:
     +schema: apple_store # default schema suffix
