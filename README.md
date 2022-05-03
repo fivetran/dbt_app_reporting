@@ -64,7 +64,7 @@ By default, this package looks for your app platform data in your target databas
 
 By default, this package also looks for specific schemas from each of your connectors. The schemas from each connector are highlighted in the code snippet below. If your data is stored in a different schema, add the relevant `_schema` variables to your `dbt_project.yml` file (see below).
 
-Additionally, by default, this package will also use the default source table names. If any of your tables are named differently, add the relevant `_identifier` variables to your `dbt_project.yml` file. For example, if your `app` table is named `app_usa` then you can set a variable for `app_identifier` to be `app_usa`. 
+Additionally, by default, this package will also use the default source table names. If any of your tables are named differently, add the relevant `*_identifier` variables to your `dbt_project.yml` file. For example, if your `app` table is named `app_usa` then you can set a variable for `app_identifier` to be `app_usa`. 
 
 ```yml
 vars:
@@ -85,30 +85,33 @@ If you use subscriptions and have the follow tables enabled for:
     - `sales_subscription_event_summary`
     - `sales_subscription_summary`
 - Google Play
-    - `<insert google tables>`
+    - `financial_stats_subscriptions_country`
 
 Add the following variables to your dbt_project.yml file
 
 ```yml
 vars:
   apple_store__using_subscriptions: true # by default this is assumed to be false
+  google_play__using_subscriptions: true # by default this is assumed to be false
 ```
 ## (Recommended) Step 4: Additional Configurations
 ### Change the Build Schema
-By default this package will build all models in your <target_schema>. This behavior can be tailored to your preference by making use of custom schemas. We highly recommend use of custom schemas for this package, as multiple sources are involved. To do so, add the following configuration to your `dbt_project.yml` file:
+By default this package will build all models in your `<target_schema>` with the respective package suffixes (see below). This behavior can be tailored to your preference by making use of custom schemas. If you would like to override the current naming conventions, please add the following configuration to your `dbt_project.yml` file and rename `+schema` configs:
 
 ```yml
 models:  
+  app_reporting:
+    +schema: app_reporting
+
   apple_store:
-    +schema: apple_store
+    +schema: apple_store # default schema suffix
   apple_store_source:
-    +schema: apple_store_source
+    +schema: apple_store_source # default schema suffix
   
   google_play:
-    +schema: google_play
+    +schema: google_play # default schema suffix
   google_play_source:
-    +schema: google_play_source
-  
+    +schema: google_play_source # default schema suffix
 ```
 
 ## Step 5: Finish Setup
