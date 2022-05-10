@@ -1,0 +1,7 @@
+packages:
+  - git: https://github.com/fivetran/dbt_apple_store.git
+    revision: main
+    warn-unpinned: false
+  - git: https://github.com/fivetran/dbt_google_play.git
+    revision: main
+    warn-unpinned: false
