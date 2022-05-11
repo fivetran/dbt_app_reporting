@@ -8,7 +8,7 @@ subsetted as (
 
     select 
         date_day,
-        'apple_store' as platform_type,
+        'apple_store' as app_platform,
         app_name, 
         platform_version as os_version,
         total_downloads as downloads,

@@ -8,7 +8,7 @@ adapter as (
 
     select 
         date_day,
-        'google_play' as platform_type,
+        'google_play' as app_platform,
         package_name as app_name,
         android_os_version as os_version,
         device_uninstalls as deletions,
