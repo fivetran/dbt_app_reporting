@@ -1,0 +1,14 @@
+packages:
+  - local: ../dbt_google_play
+  - local: ../dbt_apple_store
+  # - git: https://github.com/fivetran/dbt_google_play.git
+  #   revision: main
+  #   warn-unpinned: false
+  # - git: https://github.com/fivetran/dbt_apple_store.git
+  #   revision: main
+  #   warn-unpinned: false
+  # TODO: uncomment and remove above before release
+  # - package: fivetran/google_play
+  #   version: [">=0.1.0", "<0.2.0"]
+  # - package: fivetran/apple_store
+  #   version: [">=0.1.0", "<0.2.0"]
