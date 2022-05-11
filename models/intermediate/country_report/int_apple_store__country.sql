@@ -8,14 +8,14 @@ subsetted as (
 
     select 
         date_day,
-        'apple_store' as type,
+        'apple_store' as platform_type,
         app_name, 
-        territory as country_name,
-        country_code_alpha_2 as country_code,
+        territory_long as country_long,
+        territory_short as country_short,
         region,
         sub_region,
+        total_downloads as downloads,
         deletions,
-        total_downloads,
         page_views
     from country_report
 )
