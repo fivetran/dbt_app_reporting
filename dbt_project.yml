@@ -6,5 +6,8 @@ config-version: 2
 
 models:
   app_reporting:
+    +materialized: table 
+    # +schema: app_reporting
     intermediate:
       +materialized: view
+      # +schema: int_app_reporting
