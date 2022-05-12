@@ -8,7 +8,7 @@ subsetted as (
 
     select 
         date_day,
-        'apple_store' as platform_type,
+        'apple_store' as app_platform,
         app_name, 
         territory_long as country_long,
         territory_short as country_short,
