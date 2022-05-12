@@ -8,9 +8,9 @@ adapter as (
 
     select 
         date_day,
-        'google' as app_platform,
+        'google_play' as app_platform,
         package_name as app_name,
-        traffic_source as source_type, -- should we include search terms and/or utms for certain kinds of traffic sources?
+        traffic_source as traffic_source_type, -- google_play has further breakdowns, by search_term and utms. should we concat?
         store_listing_acquisitions as downloads,
         store_listing_visitors as page_views
     from traffic_source_report
