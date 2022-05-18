@@ -66,3 +66,39 @@ seeds:
     stats_ratings_app_version:
       +column_types:
         app_version_code: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+    app_store_platform_version_source_type:
+      +column_types:
+        date: timestamp
+    crashes_platform_version:
+      +column_types:
+        date: timestamp
+    crashes_app_version:
+      +column_types:
+        date: timestamp
+    downloads_platform_version_source_type:
+      +column_types:
+        date: timestamp
+    app_store_territory_source_type:
+      +column_types:
+        date: timestamp
+    downloads_source_type_device: 
+      +column_types:
+        date: timestamp
+    app_store_source_type_device: 
+      +column_types:
+        date: timestamp
+    usage_source_type_device:
+      +column_types:
+        date: timestamp
+    downloads_territory_source_type:
+      +column_types:
+        date: timestamp
+    usage_territory_source_type: 
+      +column_types:
+        date: timestamp
+    usage_platform_version_source_type: 
+      +column_types:
+        date: timestamp
+    usage_app_version_source_type:
+      +column_types:
+        date: timestamp
