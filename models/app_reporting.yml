@@ -1,0 +1,112 @@
+
+version: 2
+
+models:
+
+  - name: app_reporting__app_version_report
+    description: Each record in this table represents the daily count of deletions and crashes by app_platform, app_name and app_version.
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: app_version
+        description: '{{ doc("app_version") }}'
+      - name: deletions
+        description: '{{ doc("deletions") }}'
+      - name: crashes
+        description: '{{ doc("crashes") }}'
+
+  - name: app_reporting__country_report
+    description: Each record in this table represents the daily count of downloads, deletions and page_views by app_platform, app_name, country, region and sub_region.
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: country_long
+        description: '{{ doc("country_long") }}'
+      - name: country_short
+        description: '{{ doc("country_short") }}'
+      - name: region
+        description: '{{ doc("region") }}'
+      - name: sub_region
+        description: '{{ doc("sub_region") }}'
+      - name: downloads
+        description: '{{ doc("downloads") }}'
+      - name: deletions
+        description: '{{ doc("deletions") }}'
+      - name: page_views
+        description: '{{ doc("page_views") }}'     
+
+  - name: app_reporting__device_report
+    description: Each record in this table represents the daily count of downloads and deletions by app_platform, app_name and device. 
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: device
+        description: '{{ doc("device") }}'
+      - name: downloads
+        description: '{{ doc("downloads") }}'
+      - name: deletions
+        description: '{{ doc("deletions") }}'
+
+  - name: app_reporting__os_version_report
+    description: Each record in this table represents the daily count of downloads, deletions and crashes by app_platform, app_name and os_version.
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: os_version
+        description: '{{ doc("os_version") }}'
+      - name: downloads
+        description: '{{ doc("downloads") }}'
+      - name: deletions
+        description: '{{ doc("deletions") }}'
+      - name: crashes
+        description: '{{ doc("crashes") }}'
+
+  - name: app_reporting__overview_report
+    description: Each record in this table represents the daily count of downloads, deletions, page_views and crashes by app_platform and app_name.
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: downloads
+        description: '{{ doc("downloads") }}'
+      - name: deletions
+        description: '{{ doc("deletions") }}'
+      - name: page_views
+        description: '{{ doc("page_views") }}'
+      - name: crashes
+        description: '{{ doc("crashes") }}'
+
+  - name: app_reporting__traffic_source_report
+    description: Each record in this table represents the daily count of downloads and page_views by app_platform, app_name and traffic_source_type.
+    columns:
+      - name: date_day
+        description: '{{ doc("date_day") }}'
+      - name: app_platform
+        description: '{{ doc("app_platform") }}'
+      - name: app_name
+        description: '{{ doc("app_name") }}'
+      - name: traffic_source_type
+        description: '{{ doc("traffic_source_type") }}'
+      - name: downloads
+        description: '{{ doc("downloads") }}'
+      - name: page_views
+        description: '{{ doc("page_views") }}'
