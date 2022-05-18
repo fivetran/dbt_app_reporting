@@ -53,7 +53,7 @@ integration_tests:
       user: "{{ env_var('CI_POSTGRES_DBT_USER') }}"
       password: "{{ env_var('CI_POSTGRES_DBT_PASS') }}"
       port: 5432
-      dbname: "{{ env_var('CI_POSTGRES_DBT_DBNAME') }}"
+      dbname: "{{ env_var('CI_POSTGRES_DBT_DATABASE') }}"
       schema: app_reporting_integration_tests
       threads: 8
       keepalives_idle: 0
