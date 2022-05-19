@@ -1,6 +1,4 @@
 packages:
-  # - local: ../dbt_google_play
-  # - local: ../dbt_apple_store
   - git: https://github.com/fivetran/dbt_google_play.git
     revision: main
     warn-unpinned: false

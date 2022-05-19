@@ -13,13 +13,13 @@
         <img src="https://img.shields.io/badge/Contributions-welcome-blueviolet" /></a>
 </p>
 
-# App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_github/))
+# App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_app_reporting/))
 # 📣 What does this dbt package do?
 - Standardizes schemas from various app platform connectors and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels. 
 - Currently supports the following Fivetran app platform connectors:
     - [Apple App Store](https://github.com/fivetran/dbt_apple_store)
     - [Google Play](https://github.com/fivetran/dbt_google_play)
-- Generates a comprehensive data dictionary of your source and modeled GitHub data via the [dbt docs site](https://fivetran.github.io/dbt_github/)
+- Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
 
 Refer to the table below for a detailed view of final models materialized by default within this package. Additionally, check out our [Docs site](https://fivetran.github.io/dbt_app_reporting/#!/overview) for more details about these models. 
 
@@ -29,8 +29,7 @@ Refer to the table below for a detailed view of final models materialized by def
 | [app_reporting__country_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__country_report.sql)     | Each record represents daily metrics by app_name and country |
 | [app_reporting__device_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__device_report.sql)     | Each record represents daily metrics by app_name and device.                             |
 | [app_reporting__os_version_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__os_version_report.sql)    | Each record represents daily metrics by app_name and OS version.                            |
-| [app_reporting__overview_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__overview_report.sql)   | Each record represents daily metrics by app_name.                            |
-| [app_reporting__subscription_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__subscription_report.sql)   | Each record represents daily metrics by app_name and subscription_name                            |
+| [app_reporting__overview_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__overview_report.sql)   | Each record represents daily metrics by app_name.                            |                          |
 | [app_reporting__traffic_source_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__traffic_source_report.sql) | Each record represents daily metrics by app_name and traffic source.                         |
 
 # 🤔 Who is the target user of this dbt package?
