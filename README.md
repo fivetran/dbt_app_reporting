@@ -87,6 +87,7 @@ If you use subscriptions and have the follow tables enabled for:
     - `sales_subscription_summary`
 - Google Play
     - `financial_stats_subscriptions_country`
+    - `earnings`
 
 Add the following variables to your dbt_project.yml file
 
@@ -94,6 +95,7 @@ Add the following variables to your dbt_project.yml file
 vars:
   apple_store__using_subscriptions: true # by default this is assumed to be false
   google_play__using_subscriptions: true # by default this is assumed to be false
+  google_play__using_earnings: true # by default this is assumed to be false
 ```
 
 > 👀 Subscriptions and financial data are NOT included in `app_reporting` data models. This data is leveraged in the individual Google Play and Apple App Store packages, which are installed within the App Reporting package.
