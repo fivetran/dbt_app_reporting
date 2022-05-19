@@ -31,6 +31,7 @@ jobs:
             dbt deps
             dbt seed --target postgres --full-refresh
             dbt run --target postgres --full-refresh
+            dbt test --target postgres
       - run:
           name: "Run Tests - Spark"
           command: |
@@ -40,6 +41,7 @@ jobs:
             dbt deps
             dbt seed --target spark --full-refresh
             dbt run --target spark --full-refresh
+            dbt test --target spark
       - run:
           name: "Run Tests - Redshift"
           command: |
@@ -58,6 +60,7 @@ jobs:
             dbt deps
             dbt seed --target snowflake --full-refresh
             dbt run --target snowflake --full-refresh
+            dbt test --target snowflake
       - run:
           name: "Run Tests - BigQuery"
           environment:
@@ -70,3 +73,4 @@ jobs:
             dbt deps
             dbt seed --target bigquery --full-refresh
             dbt run --target bigquery --full-refresh
+            dbt test --target bigquery
