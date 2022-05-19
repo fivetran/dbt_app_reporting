@@ -11,9 +11,10 @@ subsetted as (
         'apple_store' as app_platform,
         app_name, 
         source_type as traffic_source_type,
-        total_downloads as downloads,
-        page_views
+        sum(total_downloads) as downloads,
+        sum(page_views) as page_views
     from traffic_source_report
+    {{ dbt_utils.group_by(4) }}
 )
 
 select * from subsetted

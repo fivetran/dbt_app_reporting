@@ -14,10 +14,11 @@ subsetted as (
         territory_short as country_short,
         region,
         sub_region,
-        total_downloads as downloads,
-        deletions,
-        page_views
+        sum(total_downloads) as downloads,
+        sum(deletions) as deletions,
+        sum(page_views) as page_views
     from country_report
+    {{ dbt_utils.group_by(7) }}
 )
 
 select * from subsetted
