@@ -32,6 +32,8 @@ Refer to the table below for a detailed view of final models materialized by def
 | [app_reporting__overview_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__overview_report.sql)   | Each record represents daily metrics by app_name.                            |                          |
 | [app_reporting__traffic_source_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__traffic_source_report.sql) | Each record represents daily metrics by app_name and traffic source.                         |
 
+> The individual Google Play and Apple App Store models have additional platform-specific metrics for deep-dive analyses.
+
 # 🤔 Who is the target user of this dbt package?
 - You use more than one of Fivetran's app platform connectors, including:
     - [Apple App Store](https://fivetran.com/docs/applications/apple-app-store)
@@ -59,11 +61,11 @@ packages:
 ```
 ## Step 3: Configure Your Variables
 ### Database and Schema Variables
-By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `_database` variables to your `dbt_project.yml` file (see below).
+By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `<connector>_database` variables to your `dbt_project.yml` file (see below).
 
-By default, this package also looks for specific schemas from each of your connectors. The schemas from each connector are highlighted in the code snippet below. If your data is stored in a different schema, add the relevant `_schema` variables to your `dbt_project.yml` file (see below).
+By default, this package also looks for your connector data in specific schemas (`itunes_connect` and `google_play` for Apple App Store and Google Play, respectively). If your data is stored in a different schema, add the relevant `<connector>_schema` variables to your `dbt_project.yml` file (see below).
 
-Additionally, by default, this package will also use the default source table names. If any of your tables are named differently, add the relevant `*_identifier` variables to your `dbt_project.yml` file. For example, if your `app` table is named `app_usa` then you can set a variable for `app_identifier` to be `app_usa`. 
+Additionally, this package will also use the default source table names. If any of your tables are named differently, add the relevant `<default_source_table_name>_identifier` variables to your `dbt_project.yml` file. For example, if your `app` table is named `app_usa` then you can set a variable for `app_identifier` to be `app_usa`.
 
 ```yml
 vars:
@@ -93,6 +95,9 @@ vars:
   apple_store__using_subscriptions: true # by default this is assumed to be false
   google_play__using_subscriptions: true # by default this is assumed to be false
 ```
+
+👀 **Note**: Subscriptions and financial data are NOT included in `app_reporting` data models. This data is leveraged in the individual Google Play and Apple App Store packages, which are installed within the App Reporting package.
+
 ## (Recommended) Step 4: Additional Configurations
 ### Change the Build Schema
 By default this package will build all models in your `<target_schema>` with the respective package suffixes (see below). This behavior can be tailored to your preference by making use of custom schemas. If you would like to override the current naming conventions, please add the following configuration to your `dbt_project.yml` file and rename `+schema` configs:
@@ -112,6 +117,8 @@ models:
   google_play_source:
     +schema: google_play_source # default schema suffix
 ```
+
+> Provide a blank `+schema: ` to write to the `target_schema` without any suffix.
 
 ## Step 5: Finish Setup
 Your dbt project is now setup to successfully run the dbt package models! You can now execute `dbt run` and `dbt test` to have the models materialize in your warehouse and execute the data integrity tests applied within the package.
