@@ -10,4 +10,7 @@ __What does this dbt package do?__
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
 
+__References__
+- [lukes/ISO-3166-Countries-with-Regional-Codes](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes) for the foundation of our `country_codes` mapping table
+
 For more information refer to the [README](/README.md).
