@@ -32,7 +32,7 @@ Refer to the table below for a detailed view of final models materialized by def
 | [app_reporting__overview_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__overview_report.sql)   | Each record represents daily metrics by app_name.                            |                          |
 | [app_reporting__traffic_source_report](https://github.com/fivetran/dbt_app_reporting/blob/main/models/app_reporting__traffic_source_report.sql) | Each record represents daily metrics by app_name and traffic source.                         |
 
-> The individual Google Play and Apple App Store models have additional platform-specific metrics for deep-dive analyses.
+> The individual Google Play and Apple App Store models have additional platform-specific metrics better suited for deep-dive analyses.
 
 # 🤔 Who is the target user of this dbt package?
 - You use more than one of Fivetran's app platform connectors, including:
@@ -96,7 +96,7 @@ vars:
   google_play__using_subscriptions: true # by default this is assumed to be false
 ```
 
-👀 **Note**: Subscriptions and financial data are NOT included in `app_reporting` data models. This data is leveraged in the individual Google Play and Apple App Store packages, which are installed within the App Reporting package.
+> 👀 Subscriptions and financial data are NOT included in `app_reporting` data models. This data is leveraged in the individual Google Play and Apple App Store packages, which are installed within the App Reporting package.
 
 ## (Recommended) Step 4: Additional Configurations
 ### Change the Build Schema
