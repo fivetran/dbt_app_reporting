@@ -26,4 +26,4 @@
 
 {% docs sub_region %} The UN Statistics sub-region name. ([Original Source](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)) {% enddocs%}
 
-{% docs traffic_source_type %} The original source that was credited for directing traffic to your target (e.g. directed users to a page view or a download). For detailed descriptions, please refer to the [Apple App Store](https://fivetran.github.io/dbt_apple_store_source/#!/source/source.apple_store_source.apple_store.app_store_platform_version_source_type_report) or [Google Play](https://fivetran.github.io/dbt_google_play_source/#!/source/source.google_play_source.google_play.stats_store_performance_traffic_source) docs. {% enddocs %}
+{% docs traffic_source_type %} The original source that was credited for directing traffic to your target (e.g. directed users to a page view or a download). For detailed descriptions, please refer to the [Apple App Store](https://github.com/fivetran/dbt_apple_store_source/blob/main/models/docs.md?plain=1#L72-L82) or [Google Play](https://github.com/fivetran/dbt_google_play_source/blob/main/models/docs.md?plain=1#L116) docs. {% enddocs %}
