@@ -32,16 +32,17 @@ jobs:
             dbt seed --target postgres --full-refresh
             dbt run --target postgres --full-refresh 
             dbt test --target postgres
-      - run:
-          name: "Run Tests - Spark"
-          command: |
-            . venv/bin/activate
-            echo `pwd`
-            cd integration_tests
-            dbt deps
-            dbt seed --target spark --full-refresh
-            dbt run --target spark --full-refresh
-            dbt test --target spark
+      ## Spark CircleCi testing is passing, but fails intermittently due to connection issues. Removing from regular jobs.
+      # - run:
+      #     name: "Run Tests - Spark"
+      #     command: |
+      #       . venv/bin/activate
+      #       echo `pwd`
+      #       cd integration_tests
+      #       dbt deps
+      #       dbt seed --target spark --full-refresh
+      #       dbt run --target spark --full-refresh
+      #       dbt test --target spark
       - run:
           name: "Run Tests - Redshift"
           command: |
