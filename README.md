@@ -137,13 +137,13 @@ Fivetran offers the ability for you to orchestrate your dbt project through [Fiv
 This dbt package is dependent on the following dbt packages. For more information on the below packages, refer to the [dbt hub](https://hub.getdbt.com/) site.
 > **If you have any of these dependent packages in your own `packages.yml` I highly recommend you remove them to ensure there are no package version conflicts.**
 ```yml
-packages:
-    - package: fivetran/apple_store
-      version: [">=0.1.0", "<0.2.0"]
-
-    - package: fivetran/google_play
-      version: [">=0.1.0", "<0.2.0"]
-
+packages: 
+    - package: fivetran/apple_store 
+      version: [">=0.1.0", "<0.2.0"] 
+ 
+    - package: fivetran/google_play 
+      version: [">=0.1.0", "<0.2.0"] 
+ 
     - package: fivetran/fivetran_utils
       version: [">=0.3.0", "<0.4.0"]
 
@@ -153,6 +153,8 @@ packages:
 # 🙌 How is this package maintained and can I contribute?
 ## Package Maintenance
 The Fivetran team maintaining this package **only** maintains the latest version of the package. We highly recommend you stay consistent with the [latest version](https://hub.getdbt.com/fivetran/github/latest/) of the package and refer to the [CHANGELOG](https://github.com/fivetran/dbt_app_reporting/blob/main/CHANGELOG.md) and release notes for more information on changes across versions.
+
+## Opinionated Decisions
 
 ## Contributions
 These dbt packages are developed by a small team of analytics engineers at Fivetran. However, the packages are made better by community contributions! 
