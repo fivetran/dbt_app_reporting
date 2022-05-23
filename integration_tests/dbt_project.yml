@@ -4,46 +4,44 @@ profile: 'integration_tests'
 config-version: 2
 
 vars: 
+  google_play_schema: app_reporting_integration_tests
+  apple_store_schema: app_reporting_integration_tests
   google_play_source:
-    stats_installs_app_version: "{{ ref('stats_installs_app_version') }}"
-    stats_crashes_app_version: "{{ ref('stats_crashes_app_version') }}"
-    stats_ratings_app_version: "{{ ref('stats_ratings_app_version') }}"
-    stats_installs_device: "{{ ref('stats_installs_device') }}"
-    stats_ratings_device: "{{ ref('stats_ratings_device') }}"
-    stats_installs_os_version: "{{ ref('stats_installs_os_version') }}"
-    stats_ratings_os_version: "{{ ref('stats_ratings_os_version') }}"
-    stats_crashes_os_version: "{{ ref('stats_crashes_os_version') }}"
-    stats_installs_country: "{{ ref('stats_installs_country') }}"
-    stats_ratings_country: "{{ ref('stats_ratings_country') }}"
-    stats_store_performance_country: "{{ ref('stats_store_performance_country') }}"
-    stats_store_performance_traffic_source: "{{ ref('stats_store_performance_traffic_source') }}"
-    stats_installs_overview: "{{ ref('stats_installs_overview') }}"
-    stats_crashes_overview: "{{ ref('stats_crashes_overview') }}"
-    stats_ratings_overview: "{{ ref('stats_ratings_overview') }}"
-    earnings: "{{ ref('earnings') }}"
-    financial_stats_subscriptions_country: "{{ ref('financial_stats_subscriptions_country') }}"
+    stats_installs_app_version_identifier: "stats_installs_app_version"
+    stats_crashes_app_version_identifier: "stats_crashes_app_version"
+    stats_ratings_app_version_identifier: "stats_ratings_app_version"
+    stats_installs_device_identifier: "stats_installs_device"
+    stats_ratings_device_identifier: "stats_ratings_device"
+    stats_installs_os_version_identifier: "stats_installs_os_version"
+    stats_ratings_os_version_identifier: "stats_ratings_os_version"
+    stats_crashes_os_version_identifier: "stats_crashes_os_version"
+    stats_installs_country_identifier: "stats_installs_country"
+    stats_ratings_country_identifier: "stats_ratings_country"
+    stats_store_performance_country_identifier: "stats_store_performance_country"
+    stats_store_performance_traffic_source_identifier: "stats_store_performance_traffic_source"
+    stats_installs_overview_identifier: "stats_installs_overview"
+    stats_crashes_overview_identifier: "stats_crashes_overview"
+    stats_ratings_overview_identifier: "stats_ratings_overview"
+    earnings_identifier: "earnings"
+    financial_stats_subscriptions_country_identifier: "financial_stats_subscriptions_country"
 
   apple_store_source:
-    app: "{{ ref('app') }}"
-    app_store_device: "{{ ref('app_store_source_type_device') }}"
-    usage_device: "{{ ref('usage_source_type_device') }}"
-    downloads_device: "{{ ref('downloads_source_type_device') }}"
-
-    app_store_territory: "{{ ref('app_store_territory_source_type') }}"
-    downloads_territory: "{{ ref('downloads_territory_source_type') }}"
-    usage_territory: "{{ ref('usage_territory_source_type') }}"
-
-    app_store_platform_version: "{{ ref('app_store_platform_version_source_type') }}"
-    crashes_platform_version: "{{ ref('crashes_platform_version') }}"
-    downloads_platform_version: "{{ ref('downloads_platform_version_source_type') }}"
-    usage_platform_version: "{{ ref('usage_platform_version_source_type') }}"
-
-    crashes_app_version: "{{ ref('crashes_app_version') }}"
-    usage_app_version: "{{ ref('usage_app_version_source_type') }}"
-
-    sales_account: "{{ ref('sales_account') }}"
-    sales_subscription_events: "{{ ref('sales_subscription_events') }}"
-    sales_subscription_summary: "{{ ref('sales_subscription_summary') }}"
+    app_identifier: "app"
+    app_store_device_identifier: "app_store_source_type_device"
+    usage_device_identifier: "usage_source_type_device"
+    downloads_device_identifier: "downloads_source_type_device"
+    app_store_territory_identifier: "app_store_territory_source_type"
+    downloads_territory_identifier: "downloads_territory_source_type"
+    usage_territory_identifier: "usage_territory_source_type"
+    app_store_platform_version_identifier: "app_store_platform_version_source_type"
+    crashes_platform_version_identifier: "crashes_platform_version"
+    downloads_platform_version_identifier: "downloads_platform_version_source_type"
+    usage_platform_version_identifier: "usage_platform_version_source_type"
+    crashes_app_version_identifier: "crashes_app_version"
+    usage_app_version_identifier: "usage_app_version_source_type"
+    sales_account_identifier: "sales_account"
+    sales_subscription_events_identifier: "sales_subscription_events"
+    sales_subscription_summary_identifier: "sales_subscription_summary"
 
     apple_store__subscription_events:
       - 'Renew'

@@ -21,4 +21,5 @@ subsetted as (
     {{ dbt_utils.group_by(7) }}
 )
 
-select * from subsetted
+select * 
+from subsetted

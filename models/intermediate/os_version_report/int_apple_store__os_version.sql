@@ -18,4 +18,5 @@ subsetted as (
     {{ dbt_utils.group_by(4) }}
 )
 
-select * from subsetted
+select * 
+from subsetted

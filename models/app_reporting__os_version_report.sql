@@ -1,7 +1,6 @@
 with unioned as (
 
     {{ dbt_utils.union_relations(relations=[ref('int_apple_store__os_version'), ref('int_google_play__os_version')]) }}
-
 ),
 
 final as (
@@ -17,4 +16,5 @@ final as (
     from unioned
 )
 
-select * from final
+select * 
+from final
