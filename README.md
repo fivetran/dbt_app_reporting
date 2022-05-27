@@ -140,10 +140,16 @@ This dbt package is dependent on the following dbt packages. For more informatio
 packages: 
     - package: fivetran/apple_store 
       version: [">=0.1.0", "<0.2.0"] 
- 
+
+    - package: fivetran/apple_store_source
+      version: [">=0.1.0", "<0.2.0"] 
+
     - package: fivetran/google_play 
       version: [">=0.1.0", "<0.2.0"] 
  
+    - package: fivetran/google_play_source
+      version: [">=0.1.0", "<0.2.0"] 
+
     - package: fivetran/fivetran_utils
       version: [">=0.3.0", "<0.4.0"]
 
@@ -155,6 +161,7 @@ packages:
 The Fivetran team maintaining this package **only** maintains the latest version of the package. We highly recommend you stay consistent with the [latest version](https://hub.getdbt.com/fivetran/github/latest/) of the package and refer to the [CHANGELOG](https://github.com/fivetran/dbt_app_reporting/blob/main/CHANGELOG.md) and release notes for more information on changes across versions.
 
 ## Opinionated Decisions
+In creating this package, which is meant for a wide range of use cases, we had to take opinionated stances on a few different questions we came across during development. We've consolidated significant choices we made in the [DECISIONLOG.md](https://github.com/fivetran/dbt_app_reporting/blob/main/DECISIONLOG.md), and will continue to update as the package evolves. We are always open to and encourage feedback on these choices, and the package in general.
 
 ## Contributions
 These dbt packages are developed by a small team of analytics engineers at Fivetran. However, the packages are made better by community contributions! 

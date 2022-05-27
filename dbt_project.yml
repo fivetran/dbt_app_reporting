@@ -2,12 +2,11 @@ name: 'app_reporting'
 version: '1.0.0'
 config-version: 2
 
-## should we put refs to google_play or apple_store models into variables 
 
 models:
   app_reporting:
     +materialized: table 
-    # +schema: app_reporting 
+    +schema: app_reporting 
     intermediate:
       +materialized: view
-      # +schema: int_app_reporting 
+      +schema: int_app_reporting 
