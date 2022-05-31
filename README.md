@@ -59,11 +59,9 @@ By default, this package also looks for your connector data in specific schemas 
 vars:
   apple_store_schema: itunes_connect
   apple_store_database: your_database_name
-  <default_apple_store_source_table_name>_identifier: your_table_name
   
   google_play_schema: google_play
   google_play_database: your_database_name 
-  <default_google_play_source_table_name>_identifier: your_table_name
 ```
 
 ## Step 4: Disable and Enable Source Tables
