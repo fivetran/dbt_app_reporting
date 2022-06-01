@@ -17,4 +17,5 @@ subsetted as (
     from overview_report
 )
 
-select * from subsetted
+select * 
+from subsetted
