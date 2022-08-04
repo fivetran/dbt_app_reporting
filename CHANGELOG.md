@@ -1,3 +1,8 @@
+# dbt_app_reporting v0.1.1-v0.1.2
+
+## Updates
+- `README` update to remove release badge as they are confusing in the current state of package/downstream tooling.
+
 # dbt_app_reporting v0.1.0
 
 ## Initial Release
