@@ -134,7 +134,7 @@ This dbt package is dependent on the following dbt packages. For more informatio
 ```yml
 packages: 
     - package: fivetran/apple_store 
-      version: [">=0.5.0", "<0.3.0"] 
+      version: [">=0.2.0", "<0.3.0"] 
 
     - package: fivetran/apple_store_source
       version: [">=0.2.0", "<0.3.0"] 
@@ -150,6 +150,9 @@ packages:
 
     - package: dbt-labs/dbt_utils
       version: [">=1.0.0", "<2.0.0"]
+
+    - package: dbt-labs/spark_utils
+      version: [">=0.3.0", "<0.4.0"]
 ```
 # 🙌 How is this package maintained and can I contribute?
 ## Package Maintenance
