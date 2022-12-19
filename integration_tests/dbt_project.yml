@@ -1,11 +1,11 @@
 name: 'app_reporting_integration_tests'
-version: '0.1.2'
+version: '0.2.0'
 profile: 'integration_tests'
 config-version: 2
 
 vars: 
-  google_play_schema: app_reporting_integration_test
-  apple_store_schema: app_reporting_integration_test
+  google_play_schema: app_reporting_integrations_test
+  apple_store_schema: app_reporting_integrations_test
   google_play_source:
     stats_installs_app_version_identifier: "stats_installs_app_version"
     stats_crashes_app_version_identifier: "stats_crashes_app_version"
