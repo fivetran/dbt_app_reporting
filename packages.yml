@@ -1,5 +1,8 @@
 packages:
 - package: fivetran/google_play
   version: [">=0.2.0", "<0.3.0"]
-- package: fivetran/apple_store
-  version: [">=0.2.0", "<0.3.0"]
+# - package: fivetran/apple_store
+#   version: [">=0.2.0", "<0.3.0"]
+- git: https://github.com/fivetran/dbt_apple_store_source.git
+  revision: test/source-change-validation
+  warn-unpinned: false 
