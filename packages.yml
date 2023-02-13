@@ -3,6 +3,6 @@ packages:
   version: [">=0.2.0", "<0.3.0"]
 # - package: fivetran/apple_store
 #   version: [">=0.2.0", "<0.3.0"]
-- git: https://github.com/fivetran/dbt_apple_store_source.git
+- git: https://github.com/fivetran/dbt_apple_store.git
   revision: test/source-change-validation
   warn-unpinned: false 
