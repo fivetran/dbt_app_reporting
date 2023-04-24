@@ -45,8 +45,11 @@ Include the following github package version in your `packages.yml`
 ```yaml
 packages:
   - package: fivetran/app_reporting
-    version: [">=0.2.0", "<0.3.0"]
+    version: [">=0.2.0", "<0.3.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
+
+Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
+
 ## Step 3: Configure Database and Schema Variables
 By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `<connector>_database` variables to your `dbt_project.yml` file (see below).
 
