@@ -3,7 +3,7 @@
 ## Bug Fixes:
 [PR #14](https://github.com/fivetran/dbt_app_reporting/pull/14) includes the following changes:
 - This version of the transform package points to breaking changes in the upstream [Google Play](https://github.com/fivetran/dbt_google_play_source/blob/main/CHANGELOG.md) and [Apple Store](https://github.com/fivetran/dbt_apple_store_source/blob/main/CHANGELOG.md) source packages in which the [country code](https://github.com/fivetran/dbt_apple_store_source/blob/main/seeds/apple_store_country_codes.csv) mapping tables were updated to align with Apple's [format and inclusion list](https://developer.apple.com/help/app-store-connect/reference/app-store-localizations/) of country names.
-  - This is a 🚨**breaking change**🚨 as you will need to re-seed (`dbt seed --full-refresh`) the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/apple_store_country_codes.csv) again.
+  - This is a 🚨**breaking change**🚨 as you will need to re-seed (`dbt seed --full-refresh`) the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_apple_store_source/blob/main/seeds/apple_store_country_codes.csv) again.
 
 ## Under the Hood:
 [PR #13](https://github.com/fivetran/dbt_app_reporting/pull/13) includes the following changes:
