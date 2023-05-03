@@ -45,7 +45,7 @@ Include the following github package version in your `packages.yml`
 ```yaml
 packages:
   - package: fivetran/app_reporting
-    version: [">=0.2.0", "<0.3.0"] # we recommend using ranges to capture non-breaking changes automatically
+    version: [">=0.3.0", "<0.4.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
@@ -86,7 +86,13 @@ vars:
 
 > 👀 Subscriptions and financial data are NOT included in `app_reporting` data models. This data is leveraged in the individual Google Play and Apple App Store packages, which are installed within the App Reporting package.
 
-## (Recommended) Step 5: Change the Build Schema
+## Step 5: Seed `country_codes` mapping tables (once)
+
+In order to map longform territory names to their ISO country codes, we have adapted the CSV from [lukes/ISO-3166-Countries-with-Regional-Codes](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes) to align Google and [Apple's](https://developer.apple.com/help/app-store-connect/reference/app-store-localizations/) country name formats for the App Reporting package. 
+
+You will need to `dbt seed` the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_apple_store_source/blob/main/seeds/apple_store_country_codes.csv) just once.
+
+## (Recommended) Step 6: Change the Build Schema
 By default this package will build all models in your `<target_schema>` with the respective package suffixes (see below). This behavior can be tailored to your preference by making use of custom schemas. If you would like to override the current naming conventions, please add the following configuration to your `dbt_project.yml` file and rename `+schema` configs:
 
 ```yml
@@ -107,7 +113,7 @@ models:
 
 > Provide a blank `+schema: ` to write to the `target_schema` without any suffix.
 
-## (Optional) Step 6: Additional configurations
+## (Optional) Step 7: Additional configurations
 <details><summary>Expand to view configurations</summary>
 
 ### Change the source table references
@@ -122,7 +128,7 @@ vars:
 </details>
 <br>
 
-## (Optional) Step 7: Orchestrate your models with Fivetran Transformations for dbt Core™
+## (Optional) Step 8: Orchestrate your models with Fivetran Transformations for dbt Core™
 <details><summary>Expand to view details</summary>
 <br>
 
@@ -137,16 +143,16 @@ This dbt package is dependent on the following dbt packages. For more informatio
 ```yml
 packages: 
     - package: fivetran/apple_store 
-      version: [">=0.2.0", "<0.3.0"] 
+      version: [">=0.3.0", "<0.4.0"] 
 
     - package: fivetran/apple_store_source
-      version: [">=0.2.0", "<0.3.0"] 
+      version: [">=0.3.0", "<0.4.0"] 
 
     - package: fivetran/google_play 
-      version: [">=0.2.0", "<0.3.0"] 
+      version: [">=0.3.0", "<0.4.0"] 
  
     - package: fivetran/google_play_source
-      version: [">=0.2.0", "<0.3.0"] 
+      version: [">=0.3.0", "<0.4.0"] 
 
     - package: fivetran/fivetran_utils
       version: [">=0.4.0", "<0.5.0"]
