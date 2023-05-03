@@ -6,8 +6,10 @@
   - This is a 🚨**breaking change**🚨 as you will need to re-seed (`dbt seed --full-refresh`) the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/apple_store_country_codes.csv) again.
 
 ## Under the Hood:
+[PR #13](https://github.com/fivetran/dbt_app_reporting/pull/13) includes the following changes:
 - Incorporated the new `fivetran_utils.drop_schemas_automation` macro into the end of each Buildkite integration test job.
 - Updated the pull request [templates](/.github).
+
 # dbt_app_reporting v0.2.0
 
 ## 🚨 Breaking Changes 🚨:
