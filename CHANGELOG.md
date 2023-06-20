@@ -1,7 +1,7 @@
 # dbt_app_reporting v0.3.1
 ## Bug Fixes
 [PR #16](https://github.com/fivetran/dbt_app_reporting/pull/16) includes the following bug fix.
-- Included the `country_long` field in the unique combination of columns test for the `app_reporting__country_report`. It has been identified that Google and Apple will sometimes provide records with different country_long names; however, they will be the same country_short. This is due to some countries having a multiple country_long spelling variations. 
+- Included the `country_long` field in the unique combination of columns test for the `app_reporting__country_report`. It has been identified that Apple will sometimes provide records with different country_long names; however, they will be the same country_short. This is due to some countries having multiple country_long spelling variations. 
 
 # dbt_app_reporting v0.3.0
 
