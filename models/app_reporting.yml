@@ -35,6 +35,7 @@ models:
             - app_platform
             - app_name
             - country_short
+            - country_long
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
