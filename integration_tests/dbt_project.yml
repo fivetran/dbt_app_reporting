@@ -52,6 +52,11 @@ dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
 
+models:
+  app_reporting_integration_tests:
+    +persist_docs:
+      relation: true
+      columns: true
 
 seeds:
   app_reporting_integration_tests:
