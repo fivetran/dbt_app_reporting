@@ -1,3 +1,8 @@
+# dbt_app_reporting v0.3.2
+## Bug Fixes
+[PR #19](https://github.com/fivetran/dbt_app_reporting/pull/19) includes the following update:
+- 
+
 # dbt_app_reporting v0.3.1
 ## Bug Fixes
 [PR #16](https://github.com/fivetran/dbt_app_reporting/pull/16) includes the following bug fix.

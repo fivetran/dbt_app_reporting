@@ -1,5 +1,9 @@
 packages:
 - package: fivetran/google_play
   version: [">=0.3.0", "<0.4.0"]
-- package: fivetran/apple_store
-  version: [">=0.3.0", "<0.4.0"]
+# - package: fivetran/apple_store
+#   version: [">=0.3.0", "<0.4.0"]
+
+- git: https://github.com/fivetran/dbt_apple_store.git
+  revision: bugfix/persist_docs_max_length
+  warn-unpinned: false
