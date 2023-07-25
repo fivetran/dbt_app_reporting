@@ -1,7 +1,7 @@
 # dbt_app_reporting v0.3.2
 ## Bug Fixes
 [PR #19](https://github.com/fivetran/dbt_app_reporting/pull/19) includes the following update:
-- 
+- Shorten the field description for `source_type` from the upstream [dbt_apple_store](https://github.com/fivetran/dbt_apple_store) package. This was causing an error if the persist docs config was enabled because the description size exceeded warehouse constraints.
 
 # dbt_app_reporting v0.3.1
 ## Bug Fixes
