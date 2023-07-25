@@ -53,8 +53,8 @@ dispatch:
 
 models:
   +persist_docs:
-    relation: true
-    columns: true
+    relation: "{{ false if target.type in ('spark','databricks') else true }}"
+    columns: "{{ false if target.type in ('spark','databricks') else true }}"
 
 seeds:
   app_reporting_integration_tests:
