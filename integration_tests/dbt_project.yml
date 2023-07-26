@@ -1,11 +1,10 @@
 name: 'app_reporting_integration_tests'
-version: '0.3.1'
+version: '0.3.2'
 profile: 'integration_tests'
 config-version: 2
-
 vars: 
-  google_play_schema: app_reporting_integrations_test_2
-  apple_store_schema: app_reporting_integrations_test_2
+  google_play_schema: app_reporting_integrations_test_5
+  apple_store_schema: app_reporting_integrations_test_5
   google_play_source:
     stats_installs_app_version_identifier: "stats_installs_app_version"
     stats_crashes_app_version_identifier: "stats_crashes_app_version"
@@ -52,6 +51,10 @@ dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
 
+models:
+  +persist_docs:
+    relation: "{{ false if target.type in ('spark','databricks') else true }}"
+    columns: "{{ false if target.type in ('spark','databricks') else true }}"
 
 seeds:
   app_reporting_integration_tests:
