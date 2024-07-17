@@ -1,5 +1,3 @@
-ADD source_relation WHERE NEEDED + CHECK JOINS AND WINDOW FUNCTIONS! (Delete this line when done.)
-
 with country_report as (
 
     select *
@@ -9,7 +7,7 @@ with country_report as (
 adapter as (
 
     select 
-        .source_relation,
+        source_relation,
         date_day,
         'google_play' as app_platform,
         package_name as app_name,

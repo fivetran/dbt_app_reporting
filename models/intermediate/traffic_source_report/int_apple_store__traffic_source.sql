@@ -1,5 +1,3 @@
-ADD source_relation WHERE NEEDED + CHECK JOINS AND WINDOW FUNCTIONS! (Delete this line when done.)
-
 with traffic_source_report as (
 
     select *
@@ -9,7 +7,7 @@ with traffic_source_report as (
 subsetted as (
 
     select 
-        .source_relation,
+        source_relation,
         date_day,
         'apple_store' as app_platform,
         app_name, 
