@@ -45,7 +45,7 @@ Include the following github package version in your `packages.yml`
 ```yaml
 packages:
   - package: fivetran/app_reporting
-    version: [">=0.3.0", "<0.4.0"] # we recommend using ranges to capture non-breaking changes automatically
+    version: [">=0.4.0", "<0.5.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
@@ -143,16 +143,16 @@ This dbt package is dependent on the following dbt packages. For more informatio
 ```yml
 packages: 
     - package: fivetran/apple_store 
-      version: [">=0.3.0", "<0.4.0"] 
+      version: [">=0.4.0", "<0.5.0"] 
 
     - package: fivetran/apple_store_source
-      version: [">=0.3.0", "<0.4.0"] 
+      version: [">=0.4.0", "<0.5.0"] 
 
     - package: fivetran/google_play 
-      version: [">=0.3.0", "<0.4.0"] 
+      version: [">=0.4.0", "<0.5.0"] 
  
     - package: fivetran/google_play_source
-      version: [">=0.3.0", "<0.4.0"] 
+      version: [">=0.4.0", "<0.5.0"] 
 
     - package: fivetran/fivetran_utils
       version: [">=0.4.0", "<0.5.0"]
