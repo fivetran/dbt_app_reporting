@@ -1,5 +1,5 @@
 name: 'app_reporting_integration_tests'
-version: '0.3.2'
+version: '0.4.0'
 profile: 'integration_tests'
 config-version: 2
 vars: 

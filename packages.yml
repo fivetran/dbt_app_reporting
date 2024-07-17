@@ -3,3 +3,6 @@ packages:
   version: [">=0.3.0", "<0.4.0"]
 - package: fivetran/apple_store
   version: [">=0.3.0", "<0.4.0"]
+- git: https://github.com/fivetran/dbt_app_reporting_source.git
+  revision: MagicBot/add-union-schema
+  warn-unpinned: false

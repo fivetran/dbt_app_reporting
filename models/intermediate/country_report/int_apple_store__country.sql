@@ -1,3 +1,5 @@
+ADD source_relation WHERE NEEDED + CHECK JOINS AND WINDOW FUNCTIONS! (Delete this line when done.)
+
 with country_report as (
 
     select *
@@ -7,6 +9,7 @@ with country_report as (
 subsetted as (
 
     select 
+        .source_relation,
         date_day,
         'apple_store' as app_platform,
         app_name, 
@@ -18,7 +21,7 @@ subsetted as (
         sum(deletions) as deletions,
         sum(page_views) as page_views
     from country_report
-    {{ dbt_utils.group_by(7) }}
+    {{ dbt_utils.group_by(8) }}
 )
 
 select * 

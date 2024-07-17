@@ -1,3 +1,4 @@
+UPDATE TESTS AND CHECK SOURCE_RELATION ADDED PROPERLY!!! (delete line when done.)
 
 version: 2
 
@@ -8,11 +9,14 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
             - app_version
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform
@@ -31,12 +35,15 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
             - country_short
             - country_long
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform
@@ -63,11 +70,14 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
             - device
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform
@@ -86,11 +96,14 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
             - os_version
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform
@@ -111,10 +124,13 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform
@@ -135,11 +151,14 @@ models:
     tests: 
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
+            - source_relation
             - date_day
             - app_platform
             - app_name
             - traffic_source_type
     columns:
+      - name: source_relation
+        description: "{{ doc('source_relation') }}"
       - name: date_day
         description: '{{ doc("date_day") }}'
       - name: app_platform

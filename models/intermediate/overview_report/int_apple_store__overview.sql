@@ -1,3 +1,5 @@
+ADD source_relation WHERE NEEDED + CHECK JOINS AND WINDOW FUNCTIONS! (Delete this line when done.)
+
 with overview_report as (
 
     select *
@@ -7,6 +9,7 @@ with overview_report as (
 subsetted as (
 
     select 
+        .source_relation,
         date_day,
         'apple_store' as app_platform,
         app_name, 
