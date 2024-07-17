@@ -1,13 +1,13 @@
 # dbt_app_reporting v0.4.0
 [PR #21](https://github.com/fivetran/dbt_app_reporting/pull/21) includes the following updates:
-## Feature update 🎉
-- Unioning capability! This adds the ability to union source data from multiple app_reporting connectors. Refer to the [README](https://github.com/fivetran/dbt_app_reporting/blob/main/README.md) for more details.
 
-## Under the hood 🚘
-- In the source package, updated tmp models to union source data using the `fivetran_utils.union_data` macro. 
-- To distinguish which source each field comes from, added `source_relation` column in each staging and downstream model and applied the `fivetran_utils.source_relation` macro.
-- Updated tests to account for the new `source_relation` column.
-    - The `source_relation` column is included in all joins and window function partition clauses in the transform package. 
+## 🚨 Breaking hanges 🚨
+- Identifier variables for the following packages have been updated for consistency with the source name and compatibility with the union schema feature. See the package's changelog for a full list of changes.
+  - [dbt_apple_store](https://github.com/fivetran/dbt_linkedin/blob/main/CHANGELOG.md#dbt_apple_store-v040)
+  - [dbt_google_play](https://github.com/fivetran/dbt_microsoft_ads/blob/main/CHANGELOG.md#dbt_google_play-v040)
+
+## Feature update 🎉
+- Unioning capability! This adds the ability to union source data from multiple app_reporting connectors. Refer to the [README](https://github.com/fivetran/dbt_app_reporting/blob/main/README.md#union-multiple-connectors) for more details.
 
 # dbt_app_reporting v0.3.2
 ## Bug Fixes
