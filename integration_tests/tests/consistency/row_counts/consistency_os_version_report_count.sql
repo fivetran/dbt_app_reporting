@@ -6,12 +6,12 @@
 -- this test is to make sure the rows counts are the same between versions
 with prod as (
     select count(*) as prod_rows
-    from {{ target.schema }}_app_reporting_prod.app_reporting__os_version_version_report
+    from {{ target.schema }}_app_reporting_prod.app_reporting__os_version_report
 ),
 
 dev as (
     select count(*) as dev_rows
-    from {{ target.schema }}_app_reporting_dev.app_reporting__os_version_version_report
+    from {{ target.schema }}_app_reporting_dev.app_reporting__os_version_report
 )
 
 -- test will return values and fail if the row counts don't match
