@@ -9,6 +9,9 @@
 ## Feature update 🎉
 - Unioning capability! This adds the ability to union source data from multiple app_reporting connectors. Refer to the [README](https://github.com/fivetran/dbt_app_reporting/blob/main/README.md#union-multiple-connectors) for more details.
 
+## Under the hood
+- Included auto-releaser GitHub Actions workflow to automate future releases.
+
 # dbt_app_reporting v0.3.2
 ## Bug Fixes
 [PR #19](https://github.com/fivetran/dbt_app_reporting/pull/19) includes the following update:
