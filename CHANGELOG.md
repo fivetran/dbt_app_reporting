@@ -8,6 +8,8 @@
 
 ## Feature update 🎉
 - Unioning capability! This adds the ability to union source data from multiple app_reporting connectors. Refer to the [README](https://github.com/fivetran/dbt_app_reporting/blob/main/README.md#union-multiple-connectors) for more details.
+- Added a `source_relation` column in each upstream model for tracking the source of each record.
+  - The `source_relation` column is also persisted from the upstream models to the end models.
 
 ## Under the hood
 - Included auto-releaser GitHub Actions workflow to automate future releases.
