@@ -7,6 +7,7 @@ with os_version_report as (
 subsetted as (
 
     select 
+        source_relation,
         date_day,
         'apple_store' as app_platform,
         app_name, 
@@ -15,7 +16,7 @@ subsetted as (
         sum(deletions) as deletions,
         sum(crashes) as crashes
     from os_version_report
-    {{ dbt_utils.group_by(4) }}
+    {{ dbt_utils.group_by(5) }}
 )
 
 select * 

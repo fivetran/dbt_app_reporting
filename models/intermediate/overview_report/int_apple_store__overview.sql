@@ -7,6 +7,7 @@ with overview_report as (
 subsetted as (
 
     select 
+        source_relation,
         date_day,
         'apple_store' as app_platform,
         app_name, 

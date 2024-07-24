@@ -6,6 +6,7 @@ with unioned as (
 final as (
 
     select 
+        source_relation,
         date_day,
         app_platform,
         app_name, 

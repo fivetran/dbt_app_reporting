@@ -7,6 +7,7 @@ with traffic_source_report as (
 adapter as (
 
     select 
+        source_relation,
         date_day,
         'google_play' as app_platform,
         package_name as app_name,
@@ -14,7 +15,7 @@ adapter as (
         sum(coalesce(store_listing_acquisitions, 0)) as downloads,
         sum(coalesce(store_listing_visitors, 0)) as page_views
     from traffic_source_report
-    {{ dbt_utils.group_by(n=4) }}
+    {{ dbt_utils.group_by(5) }}
 )
 
 select * 

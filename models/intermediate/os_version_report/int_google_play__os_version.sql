@@ -7,6 +7,7 @@ with os_version_report as (
 adapter as (
 
     select 
+        source_relation,
         date_day,
         'google_play' as app_platform,
         package_name as app_name,
