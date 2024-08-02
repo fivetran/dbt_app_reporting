@@ -1,3 +1,8 @@
+# dbt_app_reporting vNEXTRELEASE
+
+## Under the Hood
+- Addition of a section tag within the README so the model descriptions may be accessible within the Fivetran UI for Quickstart.
+
 # dbt_app_reporting v0.4.0
 [PR #21](https://github.com/fivetran/dbt_app_reporting/pull/21) includes the following updates:
 

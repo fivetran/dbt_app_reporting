@@ -18,6 +18,7 @@
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
 
+<!--section="app_reporting_transformation_model"-->
 Refer to the table below for a detailed view of final models materialized by default within this package. Additionally, check out our [Docs site](https://fivetran.github.io/dbt_app_reporting/#!/overview) for more details about these models. 
 
 | **model**                  | **description**                                                                                                                                               |
@@ -30,6 +31,8 @@ Refer to the table below for a detailed view of final models materialized by def
 | [app_reporting__traffic_source_report](https://fivetran.github.io/dbt_app_reporting/#!/model/model.app_reporting.app_reporting__traffic_source_report) | Each record represents daily metrics by app_name and traffic source.                         |
 
 > The individual Google Play and Apple App Store models have additional platform-specific metrics better suited for deep-dive analyses.
+
+<!--section-end-->
 
 # 🎯 How do I use the dbt package?
 ## Step 1: Pre-Requisites
