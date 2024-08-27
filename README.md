@@ -21,7 +21,7 @@
 <!--section="app_reporting_transformation_model"-->
 Refer to the table below for a detailed view of final models materialized by default within this package. Additionally, check out our [Docs site](https://fivetran.github.io/dbt_app_reporting/#!/overview) for more details about these models.
 
-| **model**                  | **description**                                                                                                                                               |
+| **Table**                  | **Description**                                                                                                                                               |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [app_reporting__app_version_report](https://fivetran.github.io/dbt_app_reporting/#!/model/model.app_reporting.app_reporting__app_version_report)             | Each record represents daily metrics by app_name and app version.                                             |
 | [app_reporting__country_report](https://fivetran.github.io/dbt_app_reporting/#!/model/model.app_reporting.app_reporting__country_report)     | Each record represents daily metrics by app_name and country |
