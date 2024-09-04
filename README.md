@@ -30,7 +30,7 @@ Refer to the table below for a detailed view of final tables materialized by def
 | [app_reporting__overview_report](https://fivetran.github.io/dbt_app_reporting/#!/model/model.app_reporting.app_reporting__overview_report)   | Each record represents daily metrics by app_name.                            |                          |
 | [app_reporting__traffic_source_report](https://fivetran.github.io/dbt_app_reporting/#!/model/model.app_reporting.app_reporting__traffic_source_report) | Each record represents daily metrics by app_name and traffic source.                         |
 
-> The individual Google Play and Apple App Store models have additional platform-specific metrics better suited for deep-dive analyses.
+> The individual Google Play and Apple App Store tables have additional platform-specific metrics better suited for deep-dive analyses.
 
 <!--section-end-->
 
@@ -197,4 +197,3 @@ We highly encourage and welcome contributions to this package. Check out [this p
 ## Are there any resources available?
 - If you encounter any questions or want to reach out for help, see the [GitHub Issue](https://github.com/fivetran/dbt_app_reporting/issues/new/choose) section to find the right avenue of support for you.
 - If you would like to provide feedback to the dbt package team at Fivetran, or would like to request a future dbt package to be developed, then feel free to fill out our [Feedback Form](https://www.surveymonkey.com/r/DQ7K7WW).
-- Have questions or want to just say hi? Book a time during our office hours [here](https://calendly.com/fivetran-solutions-team/fivetran-solutions-team-office-hours) or send us an email at solutions@fivetran.com.
