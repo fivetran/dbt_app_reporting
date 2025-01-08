@@ -18,15 +18,6 @@
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
 
-### Materialized Models
-
-Each Quickstart transformation job run materializes the following model counts for each selected connector. The total model count represents all staging, intermediate, and final models, materialized as `view`, `table`, or `incremental`:
-
-| **Connector** | **Model Count** |
-| ------------- | --------------- |
-| [Apple App Store](https://github.com/fivetran/dbt_apple_store) | 38 |
-| [Google Play](https://github.com/fivetran/dbt_google_play) | 40 |
-
 <!--section="app_reporting_transformation_model"-->
 Refer to the table below for a detailed view of final tables materialized by default within this package. Additionally, check out our [Docs site](https://fivetran.github.io/dbt_app_reporting/#!/overview) for more details about these tables.
 
@@ -42,7 +33,12 @@ Refer to the table below for a detailed view of final tables materialized by def
 > The individual Google Play and Apple App Store tables have additional platform-specific metrics better suited for deep-dive analyses.
 
 ### Materialized Models
-Each Quickstart transformation job run materializes 18 models if all components of this data model are enabled. This count includes all staging, intermediate, and final models materialized as `view`, `table`, or `incremental`.
+Each Quickstart transformation job run materializes the following model counts for each selected connector. The total model count represents all staging, intermediate, and final models, materialized as `view`, `table`, or `incremental`:
+
+| **Connector** | **Model Count** |
+| ------------- | --------------- |
+| [Apple App Store](https://github.com/fivetran/dbt_apple_store) | 38 |
+| [Google Play](https://github.com/fivetran/dbt_google_play) | 40 |
 <!--section-end-->
 
 ## How do I use the dbt package?
