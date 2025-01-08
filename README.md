@@ -12,8 +12,8 @@
 
 # App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_app_reporting/))
 ## What does this dbt package do?
-- Standardizes schemas from various app platform connectors and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels.
-- Currently supports the following Fivetran app platform connectors:
+- Standardizes schemas from various app platform connections and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels.
+- Currently supports the following Fivetran app platform connections:
     - [Apple App Store](https://github.com/fivetran/dbt_apple_store)
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
@@ -32,11 +32,13 @@ Refer to the table below for a detailed view of final tables materialized by def
 
 > The individual Google Play and Apple App Store tables have additional platform-specific metrics better suited for deep-dive analyses.
 
+### Materialized Models
+Each Quickstart transformation job run materializes 18 models if all components of this data model are enabled. This count includes all staging, intermediate, and final models materialized as `view`, `table`, or `incremental`.
 <!--section-end-->
 
 ## How do I use the dbt package?
 ### Step 1: Pre-Requisites
-- **Connector**: Have all relevant Fivetran app platform connectors syncing data into your warehouse. This package currently supports:
+- **Connector**: Have all relevant Fivetran app platform connections syncing data into your destination. This package currently supports:
     - [Apple App Store](https://fivetran.com/docs/applications/apple-app-store)
     - [Google Play](https://fivetran.com/docs/applications/google-play)
 - **Database support**: This package has been tested on **BigQuery**, **Snowflake**, **Redshift**, **Postgres** and **Databricks**. Ensure you are using one of these supported databases.
@@ -68,7 +70,7 @@ vars:
 ```
 
 ### Step 4: Disable and Enable Source Tables
-Your app platform connectors might not sync every table that this package expects. If your syncs exclude certain tables, it is because you either don't use that functionality in your respective app platforms or have actively excluded some tables from your syncs.
+Your app platform connections might not sync every table that this package expects. If your syncs exclude certain tables, it is because you either don't use that functionality in your respective app platforms or have actively excluded some tables from your syncs.
 
 If you use subscriptions and have the follow tables enabled for:
 - Apple App Store
@@ -119,8 +121,8 @@ models:
 ### (Optional) Step 7: Additional configurations
 <details open><summary>Expand/collapse configurations</summary>
 
-#### Union multiple connectors
-If you have multiple app reporting connectors in Fivetran and would like to use this package on all of them simultaneously, we have provided functionality to do so. The package will union all of the data together and pass the unioned table into the transformations. You will be able to see which source it came from in the `source_relation` column of each model. To use this functionality, you will need to set either the `<package_name>_union_schemas` OR `<package_name>_union_databases` variables (cannot do both) in your root `dbt_project.yml` file. Below are the variables and examples for each connector:
+#### Union multiple connections
+If you have multiple app reporting connections in Fivetran and would like to use this package on all of them simultaneously, we have provided functionality to do so. The package will union all of the data together and pass the unioned table into the transformations. You will be able to see which source it came from in the `source_relation` column of each model. To use this functionality, you will need to set either the `<package_name>_union_schemas` OR `<package_name>_union_databases` variables (cannot do both) in your root `dbt_project.yml` file. Below are the variables and examples for each connector:
 
 ```yml
 vars:
