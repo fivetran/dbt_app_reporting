@@ -18,6 +18,15 @@
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
 
+### Materialized Models
+
+Each Quickstart transformation job run materializes the following model counts for each selected connector. The total model count represents all staging, intermediate, and final models, materialized as `view`, `table`, or `incremental`:
+
+| **Connector** | **Model Count** |
+| ------------- | --------------- |
+| [Apple App Store](https://github.com/fivetran/dbt_apple_store) | 38 |
+| [Google Play](https://github.com/fivetran/dbt_google_play) | 40 |
+
 <!--section="app_reporting_transformation_model"-->
 Refer to the table below for a detailed view of final tables materialized by default within this package. Additionally, check out our [Docs site](https://fivetran.github.io/dbt_app_reporting/#!/overview) for more details about these tables.
 
@@ -58,7 +67,7 @@ Do NOT include the individual app platform packages in this file. The app report
 ### Step 3: Configure Database and Schema Variables
 By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `<connector>_database` variables to your `dbt_project.yml` file (see below).
 
-By default, this package also looks for your connector data in specific schemas (`itunes_connect` and `google_play` for Apple App Store and Google Play, respectively). If your data is stored in a different schema, add the relevant `<connector>_schema` variables to your `dbt_project.yml` file (see below).
+By default, this package also looks for your connection data in specific schemas (`itunes_connect` and `google_play` for Apple App Store and Google Play, respectively). If your data is stored in a different schema, add the relevant `<connection>_schema` variables to your `dbt_project.yml` file (see below).
 
 ```yml
 vars:
