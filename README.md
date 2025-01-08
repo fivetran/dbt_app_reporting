@@ -37,6 +37,7 @@ Each Quickstart transformation job run materializes the following model counts f
 
 | **Connector** | **Model Count** |
 | ------------- | --------------- |
+| App Reporting | 18 |
 | [Apple App Store](https://github.com/fivetran/dbt_apple_store) | 38 |
 | [Google Play](https://github.com/fivetran/dbt_google_play) | 40 |
 <!--section-end-->
