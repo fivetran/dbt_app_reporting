@@ -2,9 +2,7 @@
 
 ## Documentation
 - Added Quickstart model counts to README. ([#26](https://github.com/fivetran/dbt_app_reporting/pull/26))
-- Corrected references to connectors and connections in the README. ([#26](https://github.com/fivetran/dbt_app_reporting/pull/26))
-
-# dbt_app_reporting vNEXTRELEASE
+- Corrected references to connectors and connections in the README. ([#26](https://github.com/fivetran/dbt_app_reporting/pull/26)) 
 
 ## Under the Hood
 - Addition of a section tag within the README so the model descriptions may be accessible within the Fivetran UI for Quickstart.

@@ -12,8 +12,8 @@
 
 # App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_app_reporting/))
 ## What does this dbt package do?
-- Standardizes schemas from various app platform connections and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels.
-- Currently supports the following Fivetran app platform connections:
+- Standardizes schemas from various app platform connectors and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels.
+- Currently supports the following Fivetran app platform connectors:
     - [Apple App Store](https://github.com/fivetran/dbt_apple_store)
     - [Google Play](https://github.com/fivetran/dbt_google_play)
 - Generates a comprehensive data dictionary of your source and modeled App Reporting data via the [dbt docs site](https://fivetran.github.io/dbt_app_reporting/)
@@ -44,11 +44,11 @@ Each Quickstart transformation job run materializes the following model counts f
 
 ## How do I use the dbt package?
 ### Step 1: Pre-Requisites
-- **Connector**: Have all relevant Fivetran app platform connections syncing data into your destination. This package currently supports:
+- Have all relevant Fivetran app platform connections syncing data into your destination. This package currently supports:
     - [Apple App Store](https://fivetran.com/docs/applications/apple-app-store)
     - [Google Play](https://fivetran.com/docs/applications/google-play)
-- **Database support**: This package has been tested on **BigQuery**, **Snowflake**, **Redshift**, **Postgres** and **Databricks**. Ensure you are using one of these supported databases.
-- **dbt Version**: This dbt package requires you have a functional dbt project that utilizes a dbt version within the respective range `>=1.0.0, <2.0.0`.
+- This package has been tested on **BigQuery**, **Snowflake**, **Redshift**, **Postgres** and **Databricks**. Ensure you are using one of these supported databases.
+- This dbt package requires you have a functional dbt project that utilizes a dbt version within the respective range `>=1.0.0, <2.0.0`.
 
 ### Step 2: Installing the Package
 Include the following github package version in your `packages.yml`
@@ -62,7 +62,7 @@ packages:
 Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
 
 ### Step 3: Configure Database and Schema Variables
-By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `<connector>_database` variables to your `dbt_project.yml` file (see below).
+By default, this package looks for your app platform data in your target database. If this is not where your app platform data is stored, add the relevant `<connection>_database` variables to your `dbt_project.yml` file (see below).
 
 By default, this package also looks for your connection data in specific schemas (`itunes_connect` and `google_play` for Apple App Store and Google Play, respectively). If your data is stored in a different schema, add the relevant `<connection>_schema` variables to your `dbt_project.yml` file (see below).
 
@@ -128,7 +128,7 @@ models:
 <details open><summary>Expand/collapse configurations</summary>
 
 #### Union multiple connections
-If you have multiple app reporting connections in Fivetran and would like to use this package on all of them simultaneously, we have provided functionality to do so. The package will union all of the data together and pass the unioned table into the transformations. You will be able to see which source it came from in the `source_relation` column of each model. To use this functionality, you will need to set either the `<package_name>_union_schemas` OR `<package_name>_union_databases` variables (cannot do both) in your root `dbt_project.yml` file. Below are the variables and examples for each connector:
+If you have multiple app reporting connections in Fivetran and would like to use this package on all of them simultaneously, we have provided functionality to do so. The package will union all of the data together and pass the unioned table into the transformations. You will be able to see which source it came from in the `source_relation` column of each model. To use this functionality, you will need to set either the `<package_name>_union_schemas` OR `<package_name>_union_databases` variables (cannot do both) in your root `dbt_project.yml` file. Below are the variables and examples for each connection:
 
 ```yml
 vars:
