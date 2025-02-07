@@ -29,14 +29,14 @@ vars:
     google_play_financial_stats_subscriptions_country_identifier: "financial_stats_subscriptions_country"
 
   apple_store_source:
-    apple_store_app_identifier: "apple_app_store_app"
-    apple_store_sales_subscription_event_summary_identifier: "apple_sales_subscription_event_summary"
-    apple_store_sales_subscription_summary_identifier: "apple_sales_subscription_summary"
-    apple_store_discovery_and_engagement_detailed_daily_identifier: "apple_app_store_discovery_and_engagement_detailed_daily"
-    apple_store_crash_daily_identifier: "apple_app_crash_daily"
-    apple_store_download_detailed_daily_identifier: "apple_app_store_download_detailed_daily"
-    apple_store_session_detailed_daily_identifier: "apple_app_session_detailed_daily"
-    apple_store_installation_and_deletion_detailed_daily_identifier: "apple_app_store_installation_and_deletion_detailed_daily"
+    apple_store_app_identifier: "app_store_app"
+    apple_store_sales_subscription_event_summary_identifier: "sales_subscription_event_summary"
+    apple_store_sales_subscription_summary_identifier: "sales_subscription_summary"
+    apple_store_discovery_and_engagement_detailed_daily_identifier: "app_store_discovery_and_engagement_detailed_daily"
+    apple_store_crash_daily_identifier: "app_crash_daily"
+    apple_store_download_detailed_daily_identifier: "app_store_download_detailed_daily"
+    apple_store_session_detailed_daily_identifier: "app_session_detailed_daily"
+    apple_store_installation_and_deletion_detailed_daily_identifier: "app_store_installation_and_deletion_detailed_daily"
 
     apple_store__subscription_events:
       - 'Renew'
