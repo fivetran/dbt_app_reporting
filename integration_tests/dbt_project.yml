@@ -1,5 +1,5 @@
 name: 'app_reporting_integration_tests'
-version: '0.4.0'
+version: '0.5.0'
 profile: 'integration_tests'
 config-version: 2
 vars: 
@@ -8,6 +8,7 @@ vars:
   # google_play__using_earnings: true # uncomment this line when regenerating docs!
   google_play_schema: app_reporting_integrations_test_6
   apple_store_schema: app_reporting_integrations_test_6
+
   google_play_source:
     google_play_stats_installs_app_version_identifier: "stats_installs_app_version"
     google_play_stats_crashes_app_version_identifier: "stats_crashes_app_version"
@@ -28,22 +29,14 @@ vars:
     google_play_financial_stats_subscriptions_country_identifier: "financial_stats_subscriptions_country"
 
   apple_store_source:
-    apple_store_app_identifier: "app"
-    apple_store_app_store_platform_version_source_type_report_identifier: "app_store_platform_version_source_type"
-    apple_store_app_store_source_type_device_report_identifier: "app_store_source_type_device"
-    apple_store_app_store_territory_source_type_report_identifier: "app_store_territory_source_type"
-    apple_store_crashes_app_version_device_report_identifier: "crashes_app_version"
-    apple_store_crashes_platform_version_device_report_identifier: "crashes_platform_version"
-    apple_store_downloads_platform_version_source_type_report_identifier: "downloads_platform_version_source_type"
-    apple_store_downloads_source_type_device_report_identifier: "downloads_source_type_device"
-    apple_store_downloads_territory_source_type_report_identifier: "downloads_territory_source_type"
-    apple_store_sales_account_identifier: "sales_account"
-    apple_store_sales_subscription_event_summary_identifier: "sales_subscription_events"
-    apple_store_sales_subscription_summary_identifier: "sales_subscription_summary"
-    apple_store_usage_app_version_source_type_report_identifier: "usage_app_version_source_type"
-    apple_store_usage_platform_version_source_type_report_identifier: "usage_platform_version_source_type"
-    apple_store_usage_source_type_device_report_identifier: "usage_source_type_device"
-    apple_store_usage_territory_source_type_report_identifier: usage_territory_source_type
+    apple_store_app_identifier: "apple_app_store_app"
+    apple_store_sales_subscription_event_summary_identifier: "apple_sales_subscription_event_summary"
+    apple_store_sales_subscription_summary_identifier: "apple_sales_subscription_summary"
+    apple_store_discovery_and_engagement_detailed_daily_identifier: "apple_app_store_discovery_and_engagement_detailed_daily"
+    apple_store_crash_daily_identifier: "apple_app_crash_daily"
+    apple_store_download_detailed_daily_identifier: "apple_app_store_download_detailed_daily"
+    apple_store_session_detailed_daily_identifier: "apple_app_session_detailed_daily"
+    apple_store_installation_and_deletion_detailed_daily_identifier: "apple_app_store_installation_and_deletion_detailed_daily"
 
     apple_store__subscription_events:
       - 'Renew'
@@ -71,39 +64,3 @@ seeds:
     stats_ratings_app_version:
       +column_types:
         app_version_code: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-    app_store_platform_version_source_type:
-      +column_types:
-        date: timestamp
-    crashes_platform_version:
-      +column_types:
-        date: timestamp
-    crashes_app_version:
-      +column_types:
-        date: timestamp
-    downloads_platform_version_source_type:
-      +column_types:
-        date: timestamp
-    app_store_territory_source_type:
-      +column_types:
-        date: timestamp
-    downloads_source_type_device: 
-      +column_types:
-        date: timestamp
-    app_store_source_type_device: 
-      +column_types:
-        date: timestamp
-    usage_source_type_device:
-      +column_types:
-        date: timestamp
-    downloads_territory_source_type:
-      +column_types:
-        date: timestamp
-    usage_territory_source_type: 
-      +column_types:
-        date: timestamp
-    usage_platform_version_source_type: 
-      +column_types:
-        date: timestamp
-    usage_app_version_source_type:
-      +column_types:
-        date: timestamp
