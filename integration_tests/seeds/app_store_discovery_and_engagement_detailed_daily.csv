@@ -1,11 +1,11 @@
-_fivetran_id,app_id,date,event,page_type,source_type,engagement_type,device,platform_version,territory,counts,unique_counts,page_title,source_info,_fivetran_synced
-5SJIE4ZfUINJ3AI1T1A5AzRUqLc=,239587236,2024-11-04,Page view,Store sheet,App referrer,,iPhone,iOS 17.4,US,7,5,Default product page,website.com,2024-11-07 17:10:21.652 +00:00
-fTN+30viu9DOGf7xi0alJ3h3HMs=,239587236,2024-11-04,Page view,Store sheet,App Store browse,,iPhone,iOS 17.3,US,6,6,Default product page,,2024-11-07 17:10:18.235 +00:00
-9zmUs3grlpd8K7mhYs6t0P7GGBc=,239587236,2024-11-04,Page view,Store sheet,App referrer,,iPhone,iOS 18.0,US,5,5,Default product page,website_two.com,2024-11-07 17:10:21.376 +00:00
-Ar8iylQfK9915AfMCqvslNeqbco=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPad,iOS 16.7,FR,5,5,Default product page,website_two.com,2024-11-08 17:11:38.625 +00:00
-vRqeI3eSZtOtBqzLpWvtQXheFDI=,239587236,2024-11-05,Tap,Store sheet,App Store browse,Open,iPhone,iOS 17.6,CA,6,6,Default product page,,2024-11-08 17:11:38.572 +00:00
-pvCxArKHnaAFxuZf63/1PYKkiR4=,239587236,2024-11-05,Tap,Store sheet,App Store browse,Open,iPhone,iOS 18.0,GR,5,5,Default product page,,2024-11-08 17:11:40.033 +00:00
-6lXCI/W8NqhA3UsQQFvU58cuTZw=,239587236,2024-11-05,Impression,No page,App Store search,,iPhone,iOS 16.6,FR,5,5,Default product page,,2024-11-08 17:11:31.470 +00:00
-32rZ60OOHhVps86YhkBS3Z8+BiE=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 18.1,FR,5,5,Default product page,website.com,2024-11-08 17:11:31.699 +00:00
-Gm1Bl6Omn5JN2deWlmUAYpfjc/w=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 16.7,FR,11,5,Default product page,source_website.com,2024-11-08 17:11:34.334 +00:00
-pK52DqMhmHqf7bp6bWbAV159zDQ=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 18.0,FR,5,5,Default product page,website.com,2024-11-08 17:11:31.056 +00:00
+_fivetran_id,app_id,date,event,page_type,source_type,engagement_type,device,platform_version,territory,counts,unique_counts,_fivetran_synced
+5SJIE4ZfUINJ3AI1T1A5AzRUqLc=,239587236,2024-11-04,Page view,Store sheet,App referrer,,iPhone,iOS 17.4,US,7,5,2024-11-07 17:10:21.652 +00:00
+fTN+30viu9DOGf7xi0alJ3h3HMs=,239587236,2024-11-04,Page view,Store sheet,App Store browse,,iPhone,iOS 17.3,US,6,6,2024-11-07 17:10:18.235 +00:00
+9zmUs3grlpd8K7mhYs6t0P7GGBc=,239587236,2024-11-04,Page view,Store sheet,App referrer,,iPhone,iOS 18.0,US,5,5,2024-11-07 17:10:21.376 +00:00
+Ar8iylQfK9915AfMCqvslNeqbco=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPad,iOS 16.7,FR,5,5,2024-11-08 17:11:38.625 +00:00
+vRqeI3eSZtOtBqzLpWvtQXheFDI=,239587236,2024-11-05,Tap,Store sheet,App Store browse,Open,iPhone,iOS 17.6,CA,6,6,2024-11-08 17:11:38.572 +00:00
+pvCxArKHnaAFxuZf63/1PYKkiR4=,239587236,2024-11-05,Tap,Store sheet,App Store browse,Open,iPhone,iOS 18.0,GR,5,5,2024-11-08 17:11:40.033 +00:00
+6lXCI/W8NqhA3UsQQFvU58cuTZw=,239587236,2024-11-05,Impression,No page,App Store search,,iPhone,iOS 16.6,FR,5,5,2024-11-08 17:11:31.470 +00:00
+32rZ60OOHhVps86YhkBS3Z8+BiE=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 18.1,FR,5,5,2024-11-08 17:11:31.699 +00:00
+Gm1Bl6Omn5JN2deWlmUAYpfjc/w=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 16.7,FR,11,5,2024-11-08 17:11:34.334 +00:00
+pK52DqMhmHqf7bp6bWbAV159zDQ=,239587236,2024-11-05,Page view,Store sheet,App referrer,,iPhone,iOS 18.0,FR,5,5,2024-11-08 17:11:31.056 +00:00

@@ -1,11 +1,11 @@
-_fivetran_id,app_id,date,event,download_type,app_version,device,platform_version,source_type,page_type,app_download_date,territory,counts,unique_devices,source_info,page_title,_fivetran_synced
-rLTCNO6J9D59i7ffRhp+E5EyleQ=,239587236,2024-11-11,Install,Manual update,329372.0,iPhone,iOS 17.5,Web referrer,Product page,,AU,5,5,source_website.com,Default Custom Product Page,2024-11-16 17:09:33.790 +00:00
-4NMQBTa2qQSIR9OAJEoekOzqANM=,239587236,2024-11-11,Install,Manual update,329372.1,iPhone,iOS 18.1,App Store browse,No page,2024-10-24,MX,6,6,,Default No Page,2024-11-16 17:09:34.269 +00:00
-TGwYHBcBQrDPz5kyrHqwRquf2Pc=,239587236,2024-11-12,Install,Manual update,329372.0,iPhone,iOS 18.0,App Store search,No page,,CR,5,5,,Default No Page,2024-11-18 05:10:16.445 +00:00
-QnICsNy0tjs++YD8Jd/gKnkVqr8=,239587236,2024-11-12,Install,Redownload,329372.1,iPhone,iOS 18.0,App Store browse,No page,2024-11-11,US,12,5,,Default No Page,2024-11-18 05:10:17.222 +00:00
-4tfCNvQ77h0QLLhbIfilFbxr4Oo=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 17.7,App Store search,No page,,KR,8,6,,Default No Page,2024-11-18 05:10:16.576 +00:00
-Vki6Z8OPqh87H8+vc0ISkQ5S9aU=,239587236,2024-11-12,Install,Manual update,329372.0,iPhone,iOS 17.6,Unavailable,No page,,SG,7,7,,Default No Page,2024-11-18 05:10:16.424 +00:00
-uYwjMGDUKeWHsgF0G6BBREsc8gg=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 18.0,App Store search,Product page,,US,50,45,,Default Custom Product Page,2024-11-18 05:10:16.605 +00:00
-53TtP8bqpftYRBqkTsZLXsnjG2A=,239587236,2024-11-12,Install,Manual update,329372.1,iPhone,iOS 18.1,Unavailable,No page,,TR,23,20,,Default No Page,2024-11-18 05:10:17.173 +00:00
-hpZC6khrDuFKOt5BHC8E4yxeunY=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 17.6,App Store browse,No page,,AU,16,16,,Default No Page,2024-11-18 05:10:16.529 +00:00
-DjTfw5IHcig1bhl3leRb5SExOis=,239587236,2025-01-27,Delete,,120670.0,iPhone,iOS 18.2,App Store browse,No page,,US,6,6,,Default No Page,2025-01-28 17:09:31.693 +00:00
+_fivetran_id,app_id,date,event,download_type,app_version,device,platform_version,source_type,page_type,app_download_date,territory,counts,unique_devices,_fivetran_synced
+rLTCNO6J9D59i7ffRhp+E5EyleQ=,239587236,2024-11-11,Install,Manual update,329372.0,iPhone,iOS 17.5,Web referrer,Product page,,AU,5,5,2024-11-16 17:09:33.790 +00:00
+4NMQBTa2qQSIR9OAJEoekOzqANM=,239587236,2024-11-11,Install,Manual update,329372.1,iPhone,iOS 18.1,App Store browse,No page,2024-10-24,MX,6,6,2024-11-16 17:09:34.269 +00:00
+TGwYHBcBQrDPz5kyrHqwRquf2Pc=,239587236,2024-11-12,Install,Manual update,329372.0,iPhone,iOS 18.0,App Store search,No page,,CR,5,5,2024-11-18 05:10:16.445 +00:00
+QnICsNy0tjs++YD8Jd/gKnkVqr8=,239587236,2024-11-12,Install,Redownload,329372.1,iPhone,iOS 18.0,App Store browse,No page,2024-11-11,US,12,5,2024-11-18 05:10:17.222 +00:00
+4tfCNvQ77h0QLLhbIfilFbxr4Oo=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 17.7,App Store search,No page,,KR,8,6,2024-11-18 05:10:16.576 +00:00
+Vki6Z8OPqh87H8+vc0ISkQ5S9aU=,239587236,2024-11-12,Install,Manual update,329372.0,iPhone,iOS 17.6,Unavailable,No page,,SG,7,7,2024-11-18 05:10:16.424 +00:00
+uYwjMGDUKeWHsgF0G6BBREsc8gg=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 18.0,App Store search,Product page,,US,50,45,2024-11-18 05:10:16.605 +00:00
+53TtP8bqpftYRBqkTsZLXsnjG2A=,239587236,2024-11-12,Install,Manual update,329372.1,iPhone,iOS 18.1,Unavailable,No page,,TR,23,20,2024-11-18 05:10:17.173 +00:00
+hpZC6khrDuFKOt5BHC8E4yxeunY=,239587236,2024-11-12,Install,Manual update,329372.1,iPad,iOS 17.6,App Store browse,No page,,AU,16,16,2024-11-18 05:10:16.529 +00:00
+DjTfw5IHcig1bhl3leRb5SExOis=,239587236,2025-01-27,Delete,,120670.0,iPhone,iOS 18.2,App Store browse,No page,,US,6,6,2025-01-28 17:09:31.693 +00:00

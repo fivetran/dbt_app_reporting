@@ -1,11 +1,11 @@
-_fivetran_id,app_id,date,app_version,device,platform_version,source_type,page_type,app_download_date,territory,sessions,total_session_duration,unique_devices,source_info,page_title,_fivetran_synced
-o5wEoLRdDH/NskmQrUaaZBKLaTM=,239587236,2024-11-08,329372.0,iPhone,iOS 17.6,App referrer,Product page,,US,14,797,5,source_website.com,Default Custom Product Page,2024-11-13 17:10:45.370 +00:00
-z5uCMEdxXVl3h0n+kYepEiVUtvo=,239587236,2024-11-09,120652.0,iPhone,iOS 16.7,App Store search,Product page,,IT,9,898,5,,Default Custom Product Page,2024-11-14 17:10:29.921 +00:00
-VbvXuJhvMfNLeK0uN1kG/9H1K3c=,239587236,2024-11-09,329372.0,iPhone,iOS 18.1,Web referrer,Product page,,TW,23,752,5,website.com,Default Custom Product Page,2024-11-14 17:10:32.333 +00:00
-xq+QCXmwomsV+hoAVUXQ53pVevY=,239587236,2024-11-10,329372.0,iPhone,iOS 17.6,App Store search,No page,2024-11-02,PT,18,306,5,,Default No Page,2024-11-15 17:15:52.331 +00:00
-Xa6PaV9l8ni0U6VGuNwSNMm7KdU=,239587236,2024-11-10,329372.1,iPhone,iOS 17.4,App Store search,No page,,HK,15,3198,7,,Default No Page,2024-11-15 17:15:53.906 +00:00
-GF8h2QWP830nj8JLncVlc3ijoqA=,239587236,2024-11-10,329372.1,iPhone,iOS 17.6,App Store search,No page,2024-11-10,IL,20,2873,7,,Default No Page,2024-11-15 17:15:53.993 +00:00
-kGwZC0OxQTTlblE1X/H4KjUpFv8=,239587236,2024-11-10,120658.0,iPhone,iOS 18.0,App Store search,Product page,,IT,6,76,6,,Default Custom Product Page,2024-11-15 17:15:51.026 +00:00
-NgrBbeUJS4ydIChu1HbkUteIoM4=,239587236,2024-11-10,329372.0,iPhone,iOS 17.5,Web referrer,Product page,,SE,6,358,5,source_website.com,Default Custom Product Page,2024-11-15 17:15:52.045 +00:00
-iSC24SA4YvjP88OUma5VAuqbAIk=,239587236,2024-11-10,120654.0,iPhone,iOS 16.7,App Store search,No page,,LB,85,15485,5,,Default No Page,2024-11-15 17:15:50.794 +00:00
-NSjp+2R/xirT0vO4JQMQfWDwEHk=,239587236,2024-11-10,329372.1,iPhone,iOS 17.4,App Store search,No page,,GB,11,385,5,,Default No Page,2024-11-15 17:15:53.906 +00:00
+_fivetran_id,app_id,date,app_version,device,platform_version,source_type,page_type,app_download_date,territory,sessions,total_session_duration,unique_devices,_fivetran_synced
+o5wEoLRdDH/NskmQrUaaZBKLaTM=,239587236,2024-11-08,329372.0,iPhone,iOS 17.6,App referrer,Product page,,US,14,797,5,2024-11-13 17:10:45.370 +00:00
+z5uCMEdxXVl3h0n+kYepEiVUtvo=,239587236,2024-11-09,120652.0,iPhone,iOS 16.7,App Store search,Product page,,IT,9,898,5,2024-11-14 17:10:29.921 +00:00
+VbvXuJhvMfNLeK0uN1kG/9H1K3c=,239587236,2024-11-09,329372.0,iPhone,iOS 18.1,Web referrer,Product page,,TW,23,752,5,2024-11-14 17:10:32.333 +00:00
+xq+QCXmwomsV+hoAVUXQ53pVevY=,239587236,2024-11-10,329372.0,iPhone,iOS 17.6,App Store search,No page,2024-11-02,PT,18,306,5,2024-11-15 17:15:52.331 +00:00
+Xa6PaV9l8ni0U6VGuNwSNMm7KdU=,239587236,2024-11-10,329372.1,iPhone,iOS 17.4,App Store search,No page,,HK,15,3198,7,2024-11-15 17:15:53.906 +00:00
+GF8h2QWP830nj8JLncVlc3ijoqA=,239587236,2024-11-10,329372.1,iPhone,iOS 17.6,App Store search,No page,2024-11-10,IL,20,2873,7,2024-11-15 17:15:53.993 +00:00
+kGwZC0OxQTTlblE1X/H4KjUpFv8=,239587236,2024-11-10,120658.0,iPhone,iOS 18.0,App Store search,Product page,,IT,6,76,6,2024-11-15 17:15:51.026 +00:00
+NgrBbeUJS4ydIChu1HbkUteIoM4=,239587236,2024-11-10,329372.0,iPhone,iOS 17.5,Web referrer,Product page,,SE,6,358,5,2024-11-15 17:15:52.045 +00:00
+iSC24SA4YvjP88OUma5VAuqbAIk=,239587236,2024-11-10,120654.0,iPhone,iOS 16.7,App Store search,No page,,LB,85,15485,5,2024-11-15 17:15:50.794 +00:00
+NSjp+2R/xirT0vO4JQMQfWDwEHk=,239587236,2024-11-10,329372.1,iPhone,iOS 17.4,App Store search,No page,,GB,11,385,5,2024-11-15 17:15:53.906 +00:00

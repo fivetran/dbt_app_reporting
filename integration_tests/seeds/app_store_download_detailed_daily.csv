@@ -1,11 +1,11 @@
-_fivetran_id,app_id,date,download_type,app_version,device,platform_version,source_type,page_type,pre_order,territory,counts,source_info,page_title,_fivetran_synced
-4wA7BEsAKZf8NT1FwxQRAi/GfSI=,239587236,2024-10-31,Auto-update,329372.0,iPhone,iOS 18.1,Unavailable,No page,,DE,5,,No page,2024-11-02 17:08:20.343 +00:00
-eKdeGwYA7mc5y+dG/KIypR37d6U=,239587236,2024-10-31,Auto-update,120652.0,iPad,iOS 18.0,Unavailable,No page,,JP,5,,No page,2024-11-02 17:08:18.687 +00:00
-BkesX890oPBVMhTXQ/hiDdx6qtI=,239587236,2024-10-31,Auto-update,329372.0,iPhone,iOS 17.6,Web referrer,Product page,,SI,5,website.com,Default custom product page,2024-11-02 17:08:18.158 +00:00
-Ropru4fq66wJDBlw8uX7S3Y8C3c=,239587236,2024-10-31,Auto-update,329372.0,Apple TV,tvOS 17.2,App Store search,No page,,AU,6,,No page,2024-11-02 17:08:23.535 +00:00
-O7UP8N94zIg8GGMIx9B+G1NdIso=,239587236,2024-10-31,Auto-update,329372.1,iPad,iOS 16.3,App Store search,No page,,MY,8,,No page,2024-11-02 17:08:20.909 +00:00
-0thg2HpfH+pyt51xfqsX2gjBqng=,239587236,2024-10-31,Auto-update,329372.1,Apple TV,tvOS 18.0,Unavailable,Product page,,AU,5,,Default custom product page,2024-11-02 17:08:23.298 +00:00
-rHAiOrf6uCyTLOQI83Sp/4U7I3w=,239587236,2024-10-31,Auto-update,120658.0,iPhone,iOS 18.1,App Store browse,No page,,HK,9,,No page,2024-11-02 17:08:25.364 +00:00
-lueVOUt20qfGZTy7okfwofpHWEw=,239587236,2024-10-31,Auto-update,329372.0,iPad,iOS 17.7,App referrer,Store sheet,,AU,5,source_website.com,Default custom product page,2024-11-02 17:08:21.313 +00:00
-QP/giakN+TvGdJeYYUri1dZ9eAU=,239587236,2024-10-31,Manual update,120654.0,iPhone,iOS 17.5,Unavailable,No page,,MY,5,,No page,2024-11-02 17:08:20.541 +00:00
-jB997hDHmq8fhclBbRLme9x+S2I=,239587236,2024-10-31,Auto-update,329372.1,iPhone,iOS 17.6,Unavailable,Product page,,PT,5,,Default custom product page,2024-11-02 17:08:24.920 +00:00
+_fivetran_id,app_id,date,download_type,app_version,device,platform_version,source_type,page_type,pre_order,territory,counts,_fivetran_synced
+BkesX890oPBVMhTXQ/hiDdx6qtI=,239587236,2024-10-31,Auto-update,329372.0,iPhone,iOS 17.6,Web referrer,Product page,,SI,5,2024-11-02 17:08:18.158 +00:00
+0thg2HpfH+pyt51xfqsX2gjBqng=,239587236,2024-10-31,Auto-update,329372.1,Apple TV,tvOS 18.0,Unavailable,Product page,,AU,5,2024-11-02 17:08:23.298 +00:00
+lueVOUt20qfGZTy7okfwofpHWEw=,239587236,2024-10-31,Auto-update,329372.0,iPad,iOS 17.7,App referrer,Store sheet,,AU,5,2024-11-02 17:08:21.313 +00:00
+jB997hDHmq8fhclBbRLme9x+S2I=,239587236,2024-10-31,Auto-update,329372.1,iPhone,iOS 17.6,Unavailable,Product page,,PT,5,2024-11-02 17:08:24.920 +00:00
+4wA7BEsAKZf8NT1FwxQRAi/GfSI=,239587236,2024-10-31,Auto-update,329372.0,iPhone,iOS 18.1,Unavailable,No page,,DE,5,2024-11-02 17:08:20.343 +00:00
+eKdeGwYA7mc5y+dG/KIypR37d6U=,239587236,2024-10-31,Auto-update,120652.0,iPad,iOS 18.0,Unavailable,No page,,JP,5,2024-11-02 17:08:18.687 +00:00
+Ropru4fq66wJDBlw8uX7S3Y8C3c=,239587236,2024-10-31,Auto-update,329372.0,Apple TV,tvOS 17.2,App Store search,No page,,AU,6,2024-11-02 17:08:23.535 +00:00
+O7UP8N94zIg8GGMIx9B+G1NdIso=,239587236,2024-10-31,Auto-update,329372.1,iPad,iOS 16.3,App Store search,No page,,MY,8,2024-11-02 17:08:20.909 +00:00
+rHAiOrf6uCyTLOQI83Sp/4U7I3w=,239587236,2024-10-31,Auto-update,120658.0,iPhone,iOS 18.1,App Store browse,No page,,HK,9,2024-11-02 17:08:25.364 +00:00
+QP/giakN+TvGdJeYYUri1dZ9eAU=,239587236,2024-10-31,Manual update,120654.0,iPhone,iOS 17.5,Unavailable,No page,,MY,5,2024-11-02 17:08:20.541 +00:00
