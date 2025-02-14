@@ -32,11 +32,11 @@ vars:
     apple_store_app_identifier: "app_store_app"
     apple_store_sales_subscription_event_summary_identifier: "sales_subscription_event_summary"
     apple_store_sales_subscription_summary_identifier: "sales_subscription_summary"
-    apple_store_discovery_and_engagement_standard_daily_identifier: "app_store_discovery_and_engagement_daily"
+    apple_store_discovery_and_engagement_standard_daily_identifier: "app_store_discovery_and_engagement_standard_daily"
     apple_store_crash_daily_identifier: "app_crash_daily"
-    apple_store_download_standard_daily_identifier: "app_store_download_daily"
-    apple_store_session_standard_daily_identifier: "app_session_daily"
-    apple_store_installation_and_deletion_standard_daily_identifier: "app_store_installation_and_deletion_daily"
+    apple_store_download_standard_daily_identifier: "app_store_download_standard_daily"
+    apple_store_session_standard_daily_identifier: "app_session_standard_daily"
+    apple_store_installation_and_deletion_standard_daily_identifier: "app_store_installation_and_deletion_standard_daily"
 
     apple_store__subscription_events:
       - 'Renew'
