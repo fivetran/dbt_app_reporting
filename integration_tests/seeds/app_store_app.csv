@@ -1,0 +1,2 @@
+id,name,primary_locale,content_rights_declaration,was_made_for_kids,subscription_status_url,subscription_status_url_version,subscription_status_url_for_sandbox,subscription_status_url_version_for_sandbox,_fivetran_synced
+239587236,Sample,en-US,DOES_NOT_USE_THIRD_PARTY_CONTENT,,https://example.com/subscription_status,v1,https://sandbox.example.com/subscription_status,v2,2022-01-02 12:34:56.789000+00:00
