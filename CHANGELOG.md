@@ -1,7 +1,7 @@
 # dbt_app_reporting v0.5.0
 
-## Breaking Changes
-- This package has been upgraded following schema changes upstream in the `dbt_apple_store` package. For more information on the breaking changes, refer to the `dbt_apple_store` [release notes](https://github.com/fivetran/dbt_apple_store/releases/tag/v0.5.0).
+## Breaking Changes: dbt_apple_store v0.5.0 
+- This package has been updated to align with upstream schema changes introduced in version v0.5.0 of the `dbt_apple_store` package. For more information on the breaking changes, refer to the `dbt_apple_store` [release notes](https://github.com/fivetran/dbt_apple_store/releases/tag/v0.5.0).
 
 ## Documentation
 - Added Quickstart model counts to README. ([#26](https://github.com/fivetran/dbt_app_reporting/pull/26))
