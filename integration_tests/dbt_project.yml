@@ -1,5 +1,5 @@
 name: 'app_reporting_integration_tests'
-version: '0.5.0'
+version: '0.6.0'
 profile: 'integration_tests'
 config-version: 2
 vars: 
@@ -64,3 +64,5 @@ seeds:
     stats_ratings_app_version:
       +column_types:
         app_version_code: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+flags:
+  send_anonymous_usage_stats: False
