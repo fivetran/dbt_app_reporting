@@ -9,7 +9,7 @@ vars:
   google_play_schema: app_reporting_integrations_test_9
   apple_store_schema: app_reporting_integrations_test_9
 
-  google_play_source:
+  google_play:
     google_play_stats_installs_app_version_identifier: "stats_installs_app_version"
     google_play_stats_crashes_app_version_identifier: "stats_crashes_app_version"
     google_play_stats_ratings_app_version_identifier: "stats_ratings_app_version"
@@ -28,7 +28,7 @@ vars:
     google_play_earnings_identifier: "earnings"
     google_play_financial_stats_subscriptions_country_identifier: "financial_stats_subscriptions_country"
 
-  apple_store_source:
+  apple_store:
     apple_store_app_identifier: "app_store_app"
     apple_store_sales_subscription_event_summary_identifier: "sales_subscription_event_summary"
     apple_store_sales_subscription_summary_identifier: "sales_subscription_summary"
@@ -68,5 +68,4 @@ seeds:
         app_version_code: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
 flags:
   send_anonymous_usage_stats: False
-
   use_colors: True
