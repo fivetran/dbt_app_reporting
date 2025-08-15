@@ -2,15 +2,14 @@
 [PR #31](https://github.com/fivetran/dbt_app_reporting/pull/31) includes the following updates:
 
 ## Upstream Breaking Changes
-- 
+
 ### Source Package Consolidation (Google Play & Apple Store)
-- Removed the dependency on the `fivetran/google_play_source` package in `fivetran/dbt_google_play`, and the `fivetran/apple_store_source` package in `fivetran/dbt_apple_store`. See the v1.0.0 release notes of both `dbt_apple_store` ([link](https://github.com/fivetran/dbt_apple_store/releases/tag/v1.0.0)) and `dbt_google_play` ([link](https://github.com/fivetran/dbt_google_play/releases/tag/v1.0.0)) for more details.)
+- Removed the dependency on the `fivetran/google_play_source` package in `fivetran/dbt_google_play`, and the `fivetran/apple_store_source` package in `fivetran/dbt_apple_store`. See the v1.0.0 release notes of both `dbt_apple_store` ([link](https://github.com/fivetran/dbt_apple_store/releases/tag/v1.0.0)) and `dbt_google_play` ([link](https://github.com/fivetran/dbt_google_play/releases/tag/v1.0.0)) for more details.
 
 ### dbt Fusion Compatibility Updates
 - Updated package to maintain compatibility with dbt-core versions both before and after v1.10.6, which introduced a breaking change to multi-argument test syntax (e.g., `unique_combination_of_columns`).
 - Temporarily removed unsupported tests to avoid errors and ensure smoother upgrades across different dbt-core versions. These tests will be reintroduced once a safe migration path is available.
   - Removed all `dbt_utils.unique_combination_of_columns` tests.
-  - Moved `loaded_at_field: _fivetran_synced` under the `config:` block in `src_app_reporting.yml`.
 
 ### Under the Hood
 - Updated conditions in `.github/workflows/auto-release.yml`.
