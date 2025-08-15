@@ -118,13 +118,13 @@ models:
 
   apple_store:
     +schema: apple_store # default schema suffix
-  apple_store_source:
-    +schema: apple_store_source # default schema suffix
+    staging:
+      +schema: apple_store_source # default schema suffix
 
   google_play:
     +schema: google_play # default schema suffix
-  google_play_source:
-    +schema: google_play_source # default schema suffix
+    staging:
+      +schema: google_play_source # default schema suffix
 ```
 
 > Provide a blank `+schema: ` to write to the `target_schema` without any suffix.
@@ -172,7 +172,7 @@ Fivetran offers the ability for you to orchestrate your dbt project through [Fiv
 
 ## Does this package have dependencies?
 This dbt package is dependent on the following dbt packages. For more information on the below packages, refer to the [dbt hub](https://hub.getdbt.com/) site.
-> **If you have any of these dependent packages in your own `packages.yml` I highly recommend you remove them to ensure there are no package version conflicts.**
+> **If you have any of these dependent packages in your own `packages.yml` we highly recommend you remove them to ensure there are no package version conflicts.**
 ```yml
 packages: 
     - package: fivetran/google_play
