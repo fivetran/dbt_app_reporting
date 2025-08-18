@@ -1,16 +1,21 @@
-<p align="center">
+
+# App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_app_reporting/))
+
+<p align="left">
     <a alt="License"
-        href="https://github.com/fivetran/dbt_github/blob/main/LICENSE">
+        href="https://github.com/fivetran/dbt_app_reporting/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
     <a alt="dbt-core">
-        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_<2.0.0-orange.svg" /></a>
+        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_,<2.0.0-orange.svg" /></a>
     <a alt="Maintained?">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
     <a alt="PRs">
         <img src="https://img.shields.io/badge/Contributions-welcome-blueviolet" /></a>
+    <a alt="Fivetran Quickstart Compatible"
+        href="https://fivetran.com/docs/transformations/dbt/quickstart">
+        <img src="https://img.shields.io/badge/Fivetran_Quickstart_Compatible%3F-yes-green.svg" /></a>
 </p>
 
-# App Reporting dbt Package ([Docs](https://fivetran.github.io/dbt_app_reporting/))
 ## What does this dbt package do?
 - Standardizes schemas from various app platform connectors and creates reporting models for all activity aggregated to the device, country, OS version, app version, traffic source and subscription levels.
 - Currently supports the following Fivetran app platform connectors:
@@ -70,7 +75,7 @@ By default, this package also looks for your connection data in specific schemas
 vars:
   apple_store_schema: itunes_connect
   apple_store_database: your_database_name
-  
+
   google_play_schema: google_play
   google_play_database: your_database_name 
 ```
@@ -101,7 +106,7 @@ vars:
 
 In order to map longform territory names to their ISO country codes, we have adapted the CSV from [lukes/ISO-3166-Countries-with-Regional-Codes](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes) to align Google and [Apple's](https://developer.apple.com/help/app-store-connect/reference/app-store-localizations/) country name formats for the App Reporting package.
 
-You will need to `dbt seed` the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play_source/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_apple_store_source/blob/main/seeds/apple_store_country_codes.csv) just once.
+You will need to `dbt seed` the `google_play__country_codes` [file](https://github.com/fivetran/dbt_google_play/blob/main/seeds/google_play__country_codes.csv) and `apple_store_country_codes` [file](https://github.com/fivetran/dbt_apple_store/blob/main/seeds/apple_store_country_codes.csv) just once.
 
 ### (Recommended) Step 6: Change the Build Schema
 By default this package will build all models in your `<target_schema>` with the respective package suffixes (see below). This behavior can be tailored to your preference by making use of custom schemas. If you would like to override the current naming conventions, please add the following configuration to your `dbt_project.yml` file and rename `+schema` configs:
@@ -113,13 +118,13 @@ models:
 
   apple_store:
     +schema: apple_store # default schema suffix
-  apple_store_source:
-    +schema: apple_store_source # default schema suffix
-  
+    staging:
+      +schema: apple_store_source # default schema suffix
+
   google_play:
     +schema: google_play # default schema suffix
-  google_play_source:
-    +schema: google_play_source # default schema suffix
+    staging:
+      +schema: google_play_source # default schema suffix
 ```
 
 > Provide a blank `+schema: ` to write to the `target_schema` without any suffix.
@@ -145,14 +150,14 @@ To connect your multiple schema/database sources to the package models, follow t
 #### Change the source table references
 If an individual source table has a different name than the package expects, add the table name as it appears in your destination to the respective variable. This is not available when running the package on multiple unioned connections.
 
-> IMPORTANT: See the Apple Store [`dbt_project.yml`](https://github.com/fivetran/dbt_apple_store_source/blob/main/dbt_project.yml)  and Google Play [`dbt_project.yml`](https://github.com/fivetran/dbt_google_play_source/blob/main/dbt_project.yml) variable declarations to see the expected names.
-    
+> IMPORTANT: See the Apple Store [`dbt_project.yml`](https://github.com/fivetran/dbt_apple_store/blob/main/dbt_project.yml)  and Google Play [`dbt_project.yml`](https://github.com/fivetran/dbt_google_play/blob/main/dbt_project.yml) variable declarations to see the expected names.
+
 ```yml
 vars:
     apple_store_<default_source_table_name>_identifier: your_table_name 
     google_play_<default_source_table_name>_identifier: your_table_name 
 ```
-    
+
 </details>
 <br>
 
@@ -167,20 +172,14 @@ Fivetran offers the ability for you to orchestrate your dbt project through [Fiv
 
 ## Does this package have dependencies?
 This dbt package is dependent on the following dbt packages. For more information on the below packages, refer to the [dbt hub](https://hub.getdbt.com/) site.
-> **If you have any of these dependent packages in your own `packages.yml` I highly recommend you remove them to ensure there are no package version conflicts.**
+> **If you have any of these dependent packages in your own `packages.yml` we highly recommend you remove them to ensure there are no package version conflicts.**
 ```yml
 packages: 
-    - package: fivetran/apple_store
-      version: [">=0.6.0", "<0.7.0"]
-
-    - package: fivetran/apple_store_source
-      version: [">=0.6.0", "<0.7.0"]
-
     - package: fivetran/google_play
-      version: [">=0.5.0", "<0.6.0"]
- 
-    - package: fivetran/google_play_source
-      version: [">=0.5.0", "<0.6.0"]
+      version: [">=1.0.0", "<1.1.0"]
+    
+    - package: fivetran/apple_store
+      version: [">=1.0.0", "<1.1.0"]
 
     - package: fivetran/fivetran_utils
       version: [">=0.4.0", "<0.5.0"]
@@ -193,7 +192,7 @@ packages:
 ```
 ## How is this package maintained and can I contribute?
 ### Package Maintenance
-The Fivetran team maintaining this package **only** maintains the latest version of the package. We highly recommend you stay consistent with the [latest version](https://hub.getdbt.com/fivetran/github/latest/) of the package and refer to the [CHANGELOG](https://github.com/fivetran/dbt_app_reporting/blob/main/CHANGELOG.md) and release notes for more information on changes across versions.
+The Fivetran team maintaining this package **only** maintains the latest version of the package. We highly recommend you stay consistent with the [latest version](https://hub.getdbt.com/fivetran/app_reporting/latest/) of the package and refer to the [CHANGELOG](https://github.com/fivetran/dbt_app_reporting/blob/main/CHANGELOG.md) and release notes for more information on changes across versions.
 
 ### Opinionated Decisions
 In creating this package, which is meant for a wide range of use cases, we had to take opinionated stances on a few different questions we came across during development. We've consolidated significant choices we made in the [DECISIONLOG.md](https://github.com/fivetran/dbt_app_reporting/blob/main/DECISIONLOG.md), and will continue to update as the package evolves. We are always open to and encourage feedback on these choices, and the package in general.
