@@ -1,5 +1,5 @@
 name: 'app_reporting'
-version: '1.0.0'
+version: '1.1.0'
 config-version: 2
 models:
   app_reporting:
@@ -8,4 +8,4 @@ models:
     intermediate:
       +materialized: view
       +schema: int_app_reporting
-require-dbt-version: [">=1.3.0", "<2.0.0"]
+require-dbt-version: [">=1.3.0", "<3.0.0"]
