@@ -1,3 +1,9 @@
+# dbt_app_reporting v1.1.0
+[PR #32](https://github.com/fivetran/dbt_app_reporting/pull/32) includes the following updates:
+
+## Features
+- Increases the required dbt version upper limit to v3.0.0.
+
 # dbt_app_reporting v1.0.0
 [PR #31](https://github.com/fivetran/dbt_app_reporting/pull/31) includes the following updates:
 
