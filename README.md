@@ -176,10 +176,10 @@ This dbt package is dependent on the following dbt packages. For more informatio
 ```yml
 packages: 
     - package: fivetran/google_play
-      version: [">=1.0.0", "<1.1.0"]
+      version: [">=1.1.0", "<1.2.0"]
     
     - package: fivetran/apple_store
-      version: [">=1.0.0", "<1.1.0"]
+      version: [">=1.1.0", "<1.2.0"]
 
     - package: fivetran/fivetran_utils
       version: [">=0.4.0", "<0.5.0"]
