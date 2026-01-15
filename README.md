@@ -16,14 +16,14 @@
         <img src="https://img.shields.io/badge/Fivetran_Quickstart_Compatible%3F-yes-green.svg" /></a>
 </p>
 
-This dbt package transforms data from Fivetran's App Reporting connector into analytics-ready tables.
+This dbt package unifies and aggregates data from Fivetran's Apple App Store and Google Play connectors into analytics-ready tables.
 
 ## Resources
 
-- Number of materialized models¹: 18
+- Number of materialized models¹: 96
 - Connector documentation
-  - [App Reporting connector documentation](https://fivetran.com/docs/connectors/applications/app-reporting)
-  - [App Reporting ERD](https://fivetran.com/docs/connectors/applications/app-reporting#schemainformation)
+  - [Apple App Store](https://fivetran.com/docs/connectors/applications/apple-app-store#appleappstore)
+  - [Google Play](https://fivetran.com/docs/connectors/applications/google-play#googleplay)
 - dbt package documentation
   - [GitHub repository](https://github.com/fivetran/dbt_app_reporting)
   - [dbt Docs](https://fivetran.github.io/dbt_app_reporting/#!/overview)
@@ -34,8 +34,8 @@ This dbt package transforms data from Fivetran's App Reporting connector into an
 This package enables you to standardize schemas from various app platform connectors and create reporting models for all activity aggregated to the device, country, OS version, app version, and traffic source levels. It creates enriched models with metrics focused on app performance, user engagement, and platform-specific analytics.
 
 Currently supports the following Fivetran app platform connectors:
-- [Apple App Store](https://github.com/fivetran/dbt_apple_store)
-- [Google Play](https://github.com/fivetran/dbt_google_play)
+- [Apple App Store](https://fivetran.com/docs/connectors/applications/apple-app-store#appleappstore)
+- [Google Play](https://fivetran.com/docs/connectors/applications/google-play#googleplay)
 
 > The individual Google Play and Apple App Store tables have additional platform-specific metrics better suited for deep-dive analyses.
 
@@ -83,6 +83,8 @@ You can either add this dbt package in the Fivetran dashboard or import it into 
 
 - To add the package in the Fivetran dashboard, follow our [Quickstart guide](https://fivetran.com/docs/transformations/data-models/quickstart-management#quickstartmanagement).
 - To add the package to your dbt project, follow the setup instructions in the dbt package's [README file](https://github.com/fivetran/dbt_app_reporting/blob/main/README.md#how-do-i-use-the-dbt-package) to use this package.
+
+<!--section-end-->
 
 ### Installing the Package
 Include the following github package version in your `packages.yml`
