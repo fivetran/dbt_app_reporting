@@ -1,3 +1,14 @@
+# dbt_app_reporting v1.2.0
+
+[PR #33](https://github.com/fivetran/dbt_app_reporting/pull/33) includes the following updates:
+
+## Documentation
+- Updates README with standardized Fivetran formatting
+
+## Upstream Dependency Changes
+- Increases the required Google Play package to version [1.2.0](https://github.com/fivetran/dbt_google_play/releases/tag/v1.2.0)
+- Increases the required Apple Store package to version [1.2.0](https://github.com/fivetran/dbt_apple_store/releases/tag/v1.2.0)
+
 # dbt_app_reporting v1.1.0
 [PR #32](https://github.com/fivetran/dbt_app_reporting/pull/32) includes the following updates:
 
