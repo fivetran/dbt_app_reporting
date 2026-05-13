@@ -6,9 +6,8 @@
 #   redshift: ">=1.3.0,<2.0.0"
 #   databricks: ">=1.6.0,<2.0.0"
 
-schema_variable_name: "app_reporting_schema"
+schema_variable_name: "apple_store_schema"
 additional_schema_variables:
-  - "apple_store_schema"
   - "google_play_schema"
 
 include_databricks_sql: false
