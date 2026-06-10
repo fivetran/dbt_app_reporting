@@ -79,7 +79,7 @@ Include the following github package version in your `packages.yml`
 ```yaml
 packages:
   - package: fivetran/app_reporting
-    version: [">=1.2.0", "<1.3.0"] # we recommend using ranges to capture non-breaking changes automatically
+    version: [">=1.3.0", "<1.4.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
