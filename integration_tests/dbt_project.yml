@@ -57,7 +57,7 @@ seeds:
   +docs:
     show: False
   app_reporting_integration_tests:
-    +quote_columns: "{{ true if target.type == 'redshift' else false }}"
+    +quote_columns: "{{ target.type in ('redshift') or var('fivetran_using_source_casing', false) }}"
     app_crash_daily:
       +column_types:
         _fivetran_synced: timestamp
