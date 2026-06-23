@@ -1,3 +1,21 @@
+# dbt_app_reporting v1.3.0
+
+[PR #37](https://github.com/fivetran/dbt_app_reporting/pull/37) includes the following updates:
+
+## Schema/Data Changes (--full-refresh required after upgrading)
+**1 total change • 1 possible breaking change**
+
+| Data Model(s) | Change type | Old | New | Notes |
+| ------------- | ----------- | --- | --- | ----- |
+| All models | `source_relation` column (when not using the union connections of the same type feature) | Empty string (`''`) | `<database>.<schema>` |  |
+
+## Feature Updates
+- Introduces the new (recommended) `{connector_name}_sources` variables for more robust union data configuration. The old `{connector_name}_union_schemas` and `{connector_name}_union_databases` variables will still be supported. See the [README](https://github.com/fivetran/dbt_app_reporting/tree/main#define-database-and-schema-variables) for specific details.
+
+## Upstream Dependency Changes
+- Increases the required Google Play package to version [1.3.0](https://github.com/fivetran/dbt_google_play/releases/tag/v1.3.0)
+- Increases the required Apple Store package to version [1.3.0](https://github.com/fivetran/dbt_apple_store/releases/tag/v1.3.0)
+
 # dbt_app_reporting v1.2.0
 
 [PR #33](https://github.com/fivetran/dbt_app_reporting/pull/33) includes the following updates:
