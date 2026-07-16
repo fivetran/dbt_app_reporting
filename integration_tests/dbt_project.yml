@@ -60,36 +60,36 @@ seeds:
     +quote_columns: "{{ target.type in ('redshift') or var('fivetran_using_source_casing', false) }}"
     app_crash_daily:
       +column_types:
-        app_id: bigint
-        crashes: bigint
-        unique_devices: bigint
+        app_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        crashes: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        unique_devices: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     app_session_standard_daily:
       +column_types:
-        app_id: bigint
-        sessions: bigint
-        total_session_duration: bigint
-        unique_devices: bigint
+        app_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        sessions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        total_session_duration: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        unique_devices: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     app_store_app:
       +column_types:
         _fivetran_synced: timestamp
     app_store_discovery_and_engagement_standard_daily:
       +column_types:
-        app_id: bigint
-        counts: bigint
-        unique_counts: bigint
+        app_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        counts: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        unique_counts: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     app_store_download_standard_daily:
       +column_types:
-        app_id: bigint
-        counts: bigint
+        app_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        counts: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     app_store_installation_and_deletion_standard_daily:
       +column_types:
-        app_id: bigint
-        counts: bigint
-        unique_devices: bigint
+        app_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        counts: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        unique_devices: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     earnings:
       +column_types:
@@ -99,37 +99,37 @@ seeds:
         _fivetran_synced: timestamp
     sales_subscription_event_summary:
       +column_types:
-        vendor_number: bigint
-        app_apple_id: bigint
-        subscription_apple_id: bigint
-        subscription_group_id: bigint
-        consecutive_paid_periods: bigint
-        previous_subscription_apple_id: bigint
-        days_before_canceling: bigint
-        days_canceled: bigint
-        quantity: bigint
-        paid_service_days_recovered: bigint
+        vendor_number: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        app_apple_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        subscription_apple_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        subscription_group_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        consecutive_paid_periods: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        previous_subscription_apple_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        days_before_canceling: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        days_canceled: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        quantity: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        paid_service_days_recovered: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     sales_subscription_summary:
       +column_types:
-        vendor_number: bigint
-        app_apple_id: bigint
-        subscription_apple_id: bigint
-        subscription_group_id: bigint
-        active_standard_price_subscriptions: bigint
-        active_free_trial_introductory_offer_subscriptions: bigint
-        active_pay_up_front_introductory_offer_subscriptions: bigint
-        active_pay_as_you_go_introductory_offer_subscriptions: bigint
-        free_trial_promotional_offer_subscriptions: bigint
-        pay_up_front_promotional_offer_subscriptions: bigint
-        pay_as_you_go_promotional_offer_subscriptions: bigint
-        marketing_opt_ins: bigint
-        billing_retry: bigint
-        grace_period: bigint
-        free_trial_offer_code_subscriptions: bigint
-        pay_up_front_offer_code_subscriptions: bigint
-        pay_as_you_go_offer_code_subscriptions: bigint
-        subscribers: bigint
+        vendor_number: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        app_apple_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        subscription_apple_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        subscription_group_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        active_standard_price_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        active_free_trial_introductory_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        active_pay_up_front_introductory_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        active_pay_as_you_go_introductory_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        free_trial_promotional_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        pay_up_front_promotional_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        pay_as_you_go_promotional_offer_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        marketing_opt_ins: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        billing_retry: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        grace_period: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        free_trial_offer_code_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        pay_up_front_offer_code_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        pay_as_you_go_offer_code_subscriptions: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+        subscribers: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         _fivetran_synced: "{{ 'timestamptz' if target.type == 'duckdb' else 'timestamp' }}"
     stats_crashes_app_version:
       +column_types:
