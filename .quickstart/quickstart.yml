@@ -4,9 +4,24 @@ multi_connector_config:
    itunes_connect:
       database_key: apple_store_database
       union_schema_key: apple_store_union_schemas
+      model_variable: app_reporting__itunes_connect_enabled
+      public_models:
+         - apple_store__subscription_report
+      supported_vars:
+        apple_store__subscription_events:
+          type: list
+          value:
+            - "subscribe"
+            - "renew"
+            - "cancel"
+          description: "Subscription events to be tracked and aggregated in `apple_store__subscription_report`, `apple_store__device_report`, and `apple_store__overview_report`."
+          display_name: "Subscription Events"
    google_play:
       database_key: google_play_database
       union_schema_key: google_play_union_schemas
+      model_variable: app_reporting__google_play_enabled
+      public_models:
+         - google_play__finance_report
 
 requires_dbt_seed: true
 

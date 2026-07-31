@@ -1,3 +1,13 @@
+# dbt_app_reporting v1.3.1
+
+[PR #39](https://github.com/fivetran/dbt_app_reporting/pull/39) includes the following updates:
+
+## Under the Hood
+- Update Quickstart UI to surface only the connector-level models that are not implicitly run by App Reporting:
+  - [`apple_store__subscription_report`](https://fivetran.github.io/dbt_app_reporting/#!/model/model.apple_store.apple_store__subscription_report)
+  - [`google_play__finance_report`](https://fivetran.github.io/dbt_app_reporting/#!/model/model.google_play.google_play__finance_report)
+- Adds support for configuring individual package-level variables in Quickstart
+
 # dbt_app_reporting v1.3.0
 
 [PR #37](https://github.com/fivetran/dbt_app_reporting/pull/37) includes the following updates:
