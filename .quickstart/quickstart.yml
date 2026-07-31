@@ -33,6 +33,11 @@ table_variables:
     - earnings
   google_play__using_subscriptions:
     - financial_stats_subscriptions_country
+
+  _fivetran_quickstart_app_crash_daily:
+    - app_crash_daily
+  _fivetran_quickstart_stats_store_performance_traffic_source:
+    - stats_store_performance_traffic_source
     
 destination_configurations:
   databricks:
