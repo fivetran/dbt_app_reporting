@@ -15,7 +15,7 @@ multi_connector_config:
             - "renew"
             - "cancel"
           description: "Subscription events to be tracked and aggregated in `apple_store__subscription_report`, `apple_store__device_report`, and `apple_store__overview_report`."
-          display_name: "Subscription Events"
+          display_name: "Apple Store: Subscription Events"
    google_play:
       database_key: google_play_database
       union_schema_key: google_play_union_schemas
