@@ -38,7 +38,7 @@ table_variables:
     - app_crash_daily
   _fivetran_quickstart_stats_store_performance_traffic_source:
     - stats_store_performance_traffic_source
-    
+
 destination_configurations:
   databricks:
     dispatch:

@@ -2,12 +2,12 @@
 
 [PR #39](https://github.com/fivetran/dbt_app_reporting/pull/39) includes the following updates:
 
-## Under the Hood
-- Update Quickstart UI to surface only the connector-level models that are not implicitly run by App Reporting:
+## Feature Updates
+- Updates Quickstart to surface the connector-level models that App Reporting does not already build, so you can enable them directly from Quickstart:
   - [`apple_store__subscription_report`](https://fivetran.github.io/dbt_app_reporting/#!/model/model.apple_store.apple_store__subscription_report)
   - [`google_play__finance_report`](https://fivetran.github.io/dbt_app_reporting/#!/model/model.google_play.google_play__finance_report)
-- Adds support for configuring individual package-level variables in Quickstart.
-- Adds table variables for non-essential connector sources to prevent missing sources from blocking downstream Quickstart models.
+- Adds support for configuring individual `apple_store` and `google_play` package-level variables (e.g. `apple_store__subscription_events`) directly from Quickstart.
+- Adds table variables for non-essential connector source tables (`app_crash_daily`, `stats_store_performance_traffic_source`) so a missing optional source no longer blocks downstream Quickstart models.
 
 # dbt_app_reporting v1.3.0
 
