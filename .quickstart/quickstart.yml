@@ -4,7 +4,6 @@ multi_connector_config:
    itunes_connect:
       database_key: apple_store_database
       union_schema_key: apple_store_union_schemas
-      model_variable: app_reporting__itunes_connect_enabled
       public_models:
          - apple_store__subscription_report
       supported_vars:
@@ -19,7 +18,6 @@ multi_connector_config:
    google_play:
       database_key: google_play_database
       union_schema_key: google_play_union_schemas
-      model_variable: app_reporting__google_play_enabled
       public_models:
          - google_play__finance_report
 
@@ -34,9 +32,9 @@ table_variables:
   google_play__using_subscriptions:
     - financial_stats_subscriptions_country
 
-  _fivetran_quickstart_app_crash_daily:
+  _fivetran_quickstart_apple_app_crash_daily:
     - app_crash_daily
-  _fivetran_quickstart_stats_store_performance_traffic_source:
+  _fivetran_quickstart_google_stats_store_performance_traffic_source:
     - stats_store_performance_traffic_source
 
 destination_configurations:
