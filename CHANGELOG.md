@@ -1,3 +1,11 @@
+# dbt_app_reporting v1.3.1
+
+[PR #40](https://github.com/fivetran/dbt_app_reporting/pull/40) includes the following updates:
+
+## Feature Updates
+- Adds DuckDB as a supported destination.
+
+
 # dbt_app_reporting v1.3.0
 
 [PR #37](https://github.com/fivetran/dbt_app_reporting/pull/37) includes the following updates:
