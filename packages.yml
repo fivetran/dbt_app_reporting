@@ -1,6 +1,11 @@
 packages:
-- package: fivetran/google_play
-  version: [">=1.3.0", "<1.4.0"]
-
-- package: fivetran/apple_store
-  version: [">=1.3.0", "<1.4.0"]
+# - package: fivetran/google_play
+#   version: [">=1.3.0", "<1.4.0"]
+- git: https://github.com/fivetran/dbt_google_play.git
+  revision: MagicBot/duckdb-support
+  warn-unpinned: false 
+# - package: fivetran/apple_store
+#   version: [">=1.3.0", "<1.4.0"]
+- git: https://github.com/fivetran/dbt_apple_store.git
+  revision: MagicBot/duckdb-support
+  warn-unpinned: false
