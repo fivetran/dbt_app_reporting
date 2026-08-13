@@ -4,9 +4,22 @@ multi_connector_config:
    itunes_connect:
       database_key: apple_store_database
       union_schema_key: apple_store_union_schemas
+      public_models:
+         - apple_store__subscription_report
+      supported_vars:
+        apple_store__subscription_events:
+          type: list
+          value:
+            - "subscribe"
+            - "renew"
+            - "cancel"
+          description: "Subscription events to be tracked and aggregated in `apple_store__subscription_report`, `apple_store__device_report`, and `apple_store__overview_report`."
+          display_name: "Apple Store: Subscription Events"
    google_play:
       database_key: google_play_database
       union_schema_key: google_play_union_schemas
+      public_models:
+         - google_play__finance_report
 
 requires_dbt_seed: true
 
@@ -18,7 +31,12 @@ table_variables:
     - earnings
   google_play__using_subscriptions:
     - financial_stats_subscriptions_country
-    
+
+  _fivetran_quickstart_apple_app_crash_daily:
+    - app_crash_daily
+  _fivetran_quickstart_google_stats_store_performance_traffic_source:
+    - stats_store_performance_traffic_source
+
 destination_configurations:
   databricks:
     dispatch:
