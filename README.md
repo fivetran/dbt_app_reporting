@@ -15,7 +15,7 @@ This dbt package unifies and aggregates data from Fivetran's Apple App Store and
   - [DAG](https://fivetran.github.io/dbt_app_reporting/#!/overview?g_v=1)
   - [Changelog](https://github.com/fivetran/dbt_app_reporting/blob/main/CHANGELOG.md)
 - dbt Core™ supported versions
-  - `>=1.3.0, <3.0.0`
+  - `>=1.10.0, <3.0.0`
 
 ## What does this dbt package do?
 This package enables you to standardize schemas from various app platform connectors and create reporting models for all activity aggregated to the device, country, OS version, app version, and traffic source levels. It creates enriched models with metrics focused on app performance, user engagement, and platform-specific analytics.
@@ -79,7 +79,7 @@ Include the following github package version in your `packages.yml`
 ```yaml
 packages:
   - package: fivetran/app_reporting
-    version: [">=1.3.0", "<1.4.0"] # we recommend using ranges to capture non-breaking changes automatically
+    version: [">=1.4.0", "<1.5.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 Do NOT include the individual app platform packages in this file. The app reporting package itself has dependencies on these packages and will install them as well.
@@ -242,7 +242,7 @@ The Fivetran team maintaining this package only maintains the [latest version](h
 ### Contributions
 A small team of analytics engineers at Fivetran develops these dbt packages. However, the packages are made better by community contributions.
 
-We highly encourage and welcome contributions to this package. Learn how to contribute to a package in dbt's [Contributing to an external dbt package article](https://discourse.getdbt.com/t/contributing-to-a-dbt-package/657).
+We highly encourage and welcome contributions to this package. Learn how to contribute to a package by reading the guidelines in our [CONTRIBUTING.md](https://github.com/fivetran/dbt_app_reporting/blob/main/CONTRIBUTING.md) document.
 
 ### Opinionated Decisions
 In creating this package, which is meant for a wide range of use cases, we had to take opinionated stances on a few different questions we came across during development. We've consolidated significant choices we made in the [DECISIONLOG.md](https://github.com/fivetran/dbt_app_reporting/blob/main/DECISIONLOG.md), and will continue to update as the package evolves. We are always open to and encourage feedback on these choices, and the package in general.
