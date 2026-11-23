@@ -1,6 +1,6 @@
 packages:
-- package: fivetran/google_play
-  version: [">=1.3.0", "<1.4.0"]
-
-- package: fivetran/apple_store
-  version: [">=1.3.0", "<1.4.0"]
+  - package: fivetran/google_play
+    version: [">=1.4.0", "<1.5.0"]
+  
+  - package: fivetran/apple_store
+    version: [">=1.4.0", "<1.5.0"]

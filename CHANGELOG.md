@@ -1,3 +1,15 @@
+# dbt_app_reporting v1.4.0
+
+[PR #43](https://github.com/fivetran/dbt_app_reporting/pull/43) includes the following updates:
+
+## Feature Update
+- **Breaking change**: Raises the minimum dbt version to 1.10.0.
+- Adds `dbt_utils.unique_combination_of_columns` tests to staging and end models. If a test fails, please [open an issue](https://github.com/fivetran/dbt_app_reporting/issues/new/choose).
+
+## Dependency Updates
+- Bumps `fivetran/google_play` from [">=1.3.0", "<1.4.0"] to [">=1.4.0", "<1.5.0"] — Adds support for the latest upstream release.
+- Bumps `fivetran/apple_store` from [">=1.3.0", "<1.4.0"] to [">=1.4.0", "<1.5.0"] — Adds support for the latest upstream release.
+
 # dbt_app_reporting v1.3.2
 
 [PR #40](https://github.com/fivetran/dbt_app_reporting/pull/40) includes the following updates:

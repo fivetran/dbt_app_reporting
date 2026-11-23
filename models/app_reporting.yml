@@ -4,6 +4,15 @@ models:
 
   - name: app_reporting__app_version_report
     description: Each record in this table represents the daily count of deletions and crashes by app_platform, app_name and app_version.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
+              - app_version
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
@@ -22,6 +31,16 @@ models:
 
   - name: app_reporting__country_report
     description: Each record in this table represents the daily count of downloads, deletions and page_views by app_platform, app_name, country, region and sub_region.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
+              - country_short
+              - country_long
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
@@ -48,6 +67,15 @@ models:
 
   - name: app_reporting__device_report
     description: Each record in this table represents the daily count of downloads and deletions by app_platform, app_name and device. 
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
+              - device
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
@@ -66,6 +94,15 @@ models:
 
   - name: app_reporting__os_version_report
     description: Each record in this table represents the daily count of downloads, deletions and crashes by app_platform, app_name and os_version.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
+              - os_version
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
@@ -86,6 +123,14 @@ models:
 
   - name: app_reporting__overview_report
     description: Each record in this table represents the daily count of downloads, deletions, page_views and crashes by app_platform and app_name.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
@@ -106,6 +151,15 @@ models:
 
   - name: app_reporting__traffic_source_report
     description: Each record in this table represents the daily count of downloads and page_views by app_platform, app_name and traffic_source_type.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_relation
+              - date_day
+              - app_platform
+              - app_name
+              - traffic_source_type
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
