@@ -1,12 +1,6 @@
 packages:
-- git: https://github.com/fivetran/dbt_google_play.git
-  revision: main
-  # Switch back to the hub release once dbt_google_play 1.4.0 is published:
-  # - package: fivetran/google_play
-  #   version: [">=1.4.0", "<1.5.0"]
-
-- git: https://github.com/fivetran/dbt_apple_store.git
-  revision: main
-  # Switch back to the hub release once dbt_apple_store 1.4.0 is published:
-  # - package: fivetran/apple_store
-  #   version: [">=1.4.0", "<1.5.0"]
+  - package: fivetran/google_play
+    version: [">=1.4.0", "<1.5.0"]
+  
+  - package: fivetran/apple_store
+    version: [">=1.4.0", "<1.5.0"]
