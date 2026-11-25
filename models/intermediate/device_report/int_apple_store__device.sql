@@ -10,12 +10,13 @@ subsetted as (
         source_relation,
         date_day,
         'apple_store' as app_platform,
-        app_name, 
+        app_name,
+        app_name as inferred_app_name,
         device,
         sum(total_downloads) as downloads,
         sum(deletions) as deletions
     from device_report
-    {{ dbt_utils.group_by(5) }}
+    {{ dbt_utils.group_by(6) }}
 )
 
 select * 

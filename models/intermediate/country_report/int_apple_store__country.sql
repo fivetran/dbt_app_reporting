@@ -10,7 +10,8 @@ subsetted as (
         source_relation,
         date_day,
         'apple_store' as app_platform,
-        app_name, 
+        app_name,
+        app_name as inferred_app_name,
         territory_long as country_long,
         territory_short as country_short,
         region,
@@ -19,7 +20,7 @@ subsetted as (
         sum(deletions) as deletions,
         sum(page_views) as page_views
     from country_report
-    {{ dbt_utils.group_by(8) }}
+    {{ dbt_utils.group_by(9) }}
 )
 
 select * 

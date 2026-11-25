@@ -1,6 +1,8 @@
 packages:
-  - package: fivetran/google_play
-    version: [">=1.4.0", "<1.5.0"]
-  
+  # - package: fivetran/google_play
+  #   version: [">=1.5.0", "<1.6.0"]
+  - git: https://github.com/fivetran/dbt_google_play.git
+    revision: feature/inferred-app-name
+    warn-unpinned: false  
   - package: fivetran/apple_store
     version: [">=1.4.0", "<1.5.0"]

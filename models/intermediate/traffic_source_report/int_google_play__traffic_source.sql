@@ -11,11 +11,12 @@ adapter as (
         date_day,
         'google_play' as app_platform,
         package_name as app_name,
+        inferred_app_name,
         traffic_source as traffic_source_type,
         sum(coalesce(store_listing_acquisitions, 0)) as downloads,
         sum(coalesce(store_listing_visitors, 0)) as page_views
     from traffic_source_report
-    {{ dbt_utils.group_by(5) }}
+    {{ dbt_utils.group_by(6) }}
 )
 
 select * 

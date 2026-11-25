@@ -10,6 +10,7 @@ final as (
         date_day,
         app_platform,
         app_name,
+        inferred_app_name,
         app_version,
         deletions,
         crashes

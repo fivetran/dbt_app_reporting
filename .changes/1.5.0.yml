@@ -1,0 +1,22 @@
+version: 1.5.0
+schema_data_changes:
+  entries:
+  - models:
+    - app_reporting__app_version_report
+    - app_reporting__country_report
+    - app_reporting__device_report
+    - app_reporting__os_version_report
+    - app_reporting__overview_report
+    - app_reporting__traffic_source_report
+    change_type: New column
+    old: null
+    new: inferred_app_name
+    is_breaking: false
+    notes: Adds `inferred_app_name` so you can filter Apple App Store and Google Play
+      apps by a shared name. For Google Play, it's the text after the final period
+      in `package_name` (for example, `Caravan`). For Apple App Store, it matches
+      `app_name`. `app_name` is unchanged.
+dependencies:
+- description: Updates the `fivetran/google_play` dependency range to `[">=1.5.0",
+    "<1.6.0"]` to bring in `inferred_app_name`.
+date: '2026-11-25'

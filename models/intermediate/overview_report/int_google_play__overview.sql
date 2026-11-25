@@ -11,6 +11,7 @@ adapter as (
         date_day,
         'google_play' as app_platform,
         package_name as app_name,
+        inferred_app_name,
         device_uninstalls as deletions,
         device_installs as downloads,
         store_listing_visitors as page_views,
