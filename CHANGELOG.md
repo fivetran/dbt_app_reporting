@@ -1,3 +1,15 @@
+# dbt_app_reporting v1.5.0
+
+## Schema/Data Change
+**1 total change • 0 possible breaking changes**
+
+| Data Model(s) | Change type | Old | New | Notes |
+| ------------- | ----------- | --- | --- | ----- |
+| app_reporting__app_version_report<br>app_reporting__country_report<br>app_reporting__device_report<br>app_reporting__os_version_report<br>app_reporting__overview_report<br>app_reporting__traffic_source_report | New column |  | inferred_app_name | Adds `inferred_app_name` so you can filter Apple App Store and Google Play apps by a shared name. For Google Play, it's the text after the final period in `package_name` (for example, `Caravan`). For Apple App Store, it matches `app_name`. `app_name` is unchanged. |
+
+## Dependency Updates
+- Updates the `fivetran/google_play` dependency range to `[">=1.5.0", "<1.6.0"]` to bring in `inferred_app_name`.
+
 # dbt_app_reporting v1.4.0
 
 [PR #43](https://github.com/fivetran/dbt_app_reporting/pull/43) includes the following updates:
