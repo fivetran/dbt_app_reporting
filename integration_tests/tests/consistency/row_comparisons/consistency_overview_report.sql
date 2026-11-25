@@ -3,14 +3,16 @@
     enabled=var('fivetran_validation_tests_enabled', false)
 ) }}
 
+{% set exclude_cols = ['inferred_app_name'] %}
+
 -- this test ensures the daily_activity end model matches the prior version
 with prod as (
-    select *
+    select {{ dbt_utils.star(from=ref('app_reporting__overview_report'), except=exclude_cols) }}
     from {{ target.schema }}_app_reporting_prod.app_reporting__overview_report
 ),
 
 dev as (
-    select *
+    select {{ dbt_utils.star(from=ref('app_reporting__overview_report'), except=exclude_cols) }}
     from {{ target.schema }}_app_reporting_dev.app_reporting__overview_report
 ),
 

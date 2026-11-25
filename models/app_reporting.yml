@@ -22,6 +22,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: app_version
         description: '{{ doc("app_version") }}'
       - name: deletions
@@ -50,6 +52,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: country_long
         description: '{{ doc("country_long") }}'
       - name: country_short
@@ -85,6 +89,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: device
         description: '{{ doc("device") }}'
       - name: downloads
@@ -112,6 +118,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: os_version
         description: '{{ doc("os_version") }}'
       - name: downloads
@@ -140,6 +148,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: downloads
         description: '{{ doc("downloads") }}'
       - name: deletions
@@ -169,6 +179,8 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
+      - name: inferred_app_name
+        description: '{{ doc("inferred_app_name") }}'
       - name: traffic_source_type
         description: '{{ doc("traffic_source_type") }}'
       - name: downloads

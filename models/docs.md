@@ -1,6 +1,8 @@
 {% docs date_day %} The date of the report and respective recorded metric(s); follows the format YYYY-MM-DD. {% enddocs %}
 
-{% docs app_name %} Application Name. {% enddocs %}
+{% docs app_name %} Application Name. For Google Play, this is the `package_name` (for example, `com.mwaysolutions.messeDd.Caravan`). For Apple App Store, this is the app display name. {% enddocs %}
+
+{% docs inferred_app_name %} Application name aligned across stores. For Google Play, this is the text after the final period in `package_name` (for example, `Caravan`). For Apple App Store, this is the same as `app_name`. Use this field to filter apps from both stores by a shared name. Verify the Google Play values match your app names. {% enddocs %}
 
 {% docs app_platform %} The name of the App Platform and will either be 'apple_store' or 'google_play.' {% enddocs %}
 

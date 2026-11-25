@@ -10,6 +10,7 @@ final as (
         date_day,
         app_platform,
         app_name,
+        inferred_app_name,
         traffic_source_type,
         downloads,
         page_views
